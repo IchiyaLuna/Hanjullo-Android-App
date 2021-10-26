@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">HanjulloApp</string>
+    <string name="ellipse">EllipseLine</string>
+    <string name="profile_image">ProfileImage</string>
+    <string name="around_me_bg_image">AroundMeImage</string>
+
+
+    <string name="hello_text">님, 안녕 !</string>
+    <string name="name_text_default">XX</string>
+    <string name="today_text_default">Today</string>
+    <string name="today_num_default">0</string>
+    <string name="today_slash">/</string>
+    <string name="total_num_default">0</string>
+
+    <string name="around_me_text">Around me</string>
+    <string name="keyword_text">keyword</string>
+    <string name="keyword_default">#태그</string>
+    
+    <string name="inside_me_text">Inside me</string>
+    <string name="behind_me_text">Behind me</string>
+    <string name="in_front_of_me_text">In front of me</string>
+
+    <string name="inside_me_btn">InsideMeBtn</string>
+    <string name="behind_me_btn">BehindMeBtn</string>
+    <string name="in_front_of_me_btn">FrontMeBtn</string>
+
+    <string name="arrow_btn_light">ArrowButtonLight</string>
+    <string name="arrow_btn_dark">ArrowButtonDark</string>
+
+    <string name="around_me_example">오늘도 바빴지만 나름 감사한 하루를 보냈어!</string>
+
+    <string name="profile_btn">ProfileBtn</string>
+    <string name="ranking_btn">RankingBtn</string>
+    <string name="calendar_btn">CalendarBtn</string>
+    <string name="setting_btn">SettingBtn</string>
+</resources>
