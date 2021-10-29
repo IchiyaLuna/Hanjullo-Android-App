@@ -12,10 +12,14 @@
         android:theme="@style/Theme.HanjulloApp">
         <activity
             android:name=".DailyQuestionSubActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".DailyQuestionChoiceActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
