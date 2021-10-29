@@ -10,7 +10,7 @@
     tools:context=".DailyQuestionChoiceActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/todayQuestionText"
         android:layout_width="296dp"
         android:layout_height="28.5dp"
         android:layout_marginTop="132dp"
@@ -27,8 +27,8 @@
 
     <Button
         android:id="@+id/nextBtn"
-        android:layout_width="206.3dp"
-        android:layout_height="51.3dp"
+        android:layout_width="66.5dp"
+        android:layout_height="35.8dp"
         android:backgroundTint="#668EAAD7"
         android:fontFamily="@font/pretendard"
         android:insetTop="0dp"
@@ -36,9 +36,11 @@
         android:shadowColor="#00FFFFFF"
         android:stateListAnimator="@null"
         android:text="@string/next_text"
+        android:textSize="12sp"
         app:cornerRadius="18.24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="573dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

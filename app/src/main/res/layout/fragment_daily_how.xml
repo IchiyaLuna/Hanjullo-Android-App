@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="287.3dp"
+    android:layout_height="315.8dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".DailyHowFragment">
+
+    <Button
+        android:id="@+id/bestBtn"
+        android:layout_width="206.3dp"
+        android:layout_height="51.3dp"
+        android:background="@drawable/btn_light_style"
+        android:fontFamily="@font/pretendard"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="@string/question_today_best"
+        android:textSize="16.8sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/goodBtn"
+        android:layout_width="206.3dp"
+        android:layout_height="51.3dp"
+        android:backgroundTint="#66A4B9DA"
+        android:fontFamily="@font/pretendard"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="@string/question_today_good"
+        android:textSize="16.8sp"
+        app:cornerRadius="18.24dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/niceBtn"
+        android:layout_width="206.3dp"
+        android:layout_height="51.3dp"
+        android:backgroundTint="#66A4B9DA"
+        android:fontFamily="@font/pretendard"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="@string/question_today_not_bad"
+        android:textSize="16.8sp"
+        app:cornerRadius="18.24dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/notBadBtn"
+        android:layout_width="206.3dp"
+        android:layout_height="51.3dp"
+        android:backgroundTint="#66A4B9DA"
+        android:fontFamily="@font/pretendard"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="@string/question_today_nice"
+        android:textSize="16.8sp"
+        app:cornerRadius="18.24dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/badBtn"
+        android:layout_width="206.3dp"
+        android:layout_height="51.3dp"
+        android:backgroundTint="#66A4B9DA"
+        android:fontFamily="@font/pretendard"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="@string/question_today_bad"
+        android:textSize="16.8sp"
+        app:cornerRadius="18.24dp"/>
+</LinearLayout>
