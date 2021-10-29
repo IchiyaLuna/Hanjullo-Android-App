@@ -15,7 +15,7 @@
     <string name="around_me_text">Around me</string>
     <string name="keyword_text">keyword</string>
     <string name="keyword_default">#태그</string>
-    
+
     <string name="inside_me_text">Inside me</string>
     <string name="behind_me_text">Behind me</string>
     <string name="in_front_of_me_text">In front of me</string>
@@ -33,4 +33,22 @@
     <string name="ranking_btn">RankingBtn</string>
     <string name="calendar_btn">CalendarBtn</string>
     <string name="setting_btn">SettingBtn</string>
+    
+    <string name="question_today_text">오늘 하루는 어땠어?</string>
+    
+    <string name="question_today_best">최고야</string>
+    <string name="question_today_good">좋아</string>
+    <string name="question_today_nice">괜찮아</string>
+    <string name="question_today_not_bad">그냥 그래</string>
+    <string name="question_today_bad">별로야</string>
+
+    <string name="next_text">다음</string>
+
+    <string name="answer_best">BestBtn</string>
+    <string name="answer_good">GoodBtn</string>
+    <string name="answer_nice">NiceBtn</string>
+    <string name="answer_not_bad">NotBadBtn</string>
+    <string name="answer_bad">BadBtn</string>
+
+    <string name="next_btn">NextBtn</string>
 </resources>
