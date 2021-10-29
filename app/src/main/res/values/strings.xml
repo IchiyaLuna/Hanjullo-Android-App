@@ -33,9 +33,9 @@
     <string name="ranking_btn">RankingBtn</string>
     <string name="calendar_btn">CalendarBtn</string>
     <string name="setting_btn">SettingBtn</string>
-
+    
     <string name="question_today_text">오늘 하루는 어땠어?</string>
-
+    
     <string name="question_today_best">최고야</string>
     <string name="question_today_good">좋아</string>
     <string name="question_today_nice">괜찮아</string>
@@ -53,4 +53,10 @@
     <string name="next_btn">NextBtn</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="why_happy_today">왜 oo 때문에\n 오늘이 좋았던거 같아?</string>
+    <string name="number_of_char">0/140</string>
+
+
+
 </resources>
