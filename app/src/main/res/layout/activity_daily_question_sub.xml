@@ -35,6 +35,7 @@
         android:textColor="@color/white"
         android:textSize="21sp"
 
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/whyHappyText" />
@@ -60,15 +61,12 @@
         android:layout_width="66.5dp"
         android:layout_height="35.8dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#668EAAD7"
+        android:background="@drawable/btn_medium_style"
         android:fontFamily="@font/pretendard"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:shadowColor="#00FFFFFF"
+
         android:stateListAnimator="@null"
         android:text="@string/next_text"
         android:textColor="@color/white"
-        app:cornerRadius="18.24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/whyHappyEditText" />
