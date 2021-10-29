@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="287.3dp"
     android:layout_height="315.8dp"
@@ -18,6 +17,7 @@
         android:insetBottom="0dp"
         android:stateListAnimator="@null"
         android:text="@string/question_today_best"
+        android:textColor="@color/white"
         android:textSize="16.8sp" />
 
     <Space
@@ -29,14 +29,14 @@
         android:id="@+id/goodBtn"
         android:layout_width="206.3dp"
         android:layout_height="51.3dp"
-        android:backgroundTint="#66A4B9DA"
+        android:background="@drawable/btn_light_style"
         android:fontFamily="@font/pretendard"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:stateListAnimator="@null"
         android:text="@string/question_today_good"
-        android:textSize="16.8sp"
-        app:cornerRadius="18.24dp" />
+        android:textColor="@color/white"
+        android:textSize="16.8sp" />
 
     <Space
         android:layout_width="match_parent"
@@ -47,14 +47,14 @@
         android:id="@+id/niceBtn"
         android:layout_width="206.3dp"
         android:layout_height="51.3dp"
-        android:backgroundTint="#66A4B9DA"
+        android:background="@drawable/btn_light_style"
         android:fontFamily="@font/pretendard"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:stateListAnimator="@null"
         android:text="@string/question_today_not_bad"
-        android:textSize="16.8sp"
-        app:cornerRadius="18.24dp"/>
+        android:textColor="@color/white"
+        android:textSize="16.8sp"/>
 
     <Space
         android:layout_width="match_parent"
@@ -65,14 +65,14 @@
         android:id="@+id/notBadBtn"
         android:layout_width="206.3dp"
         android:layout_height="51.3dp"
-        android:backgroundTint="#66A4B9DA"
+        android:background="@drawable/btn_light_style"
         android:fontFamily="@font/pretendard"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:stateListAnimator="@null"
         android:text="@string/question_today_nice"
-        android:textSize="16.8sp"
-        app:cornerRadius="18.24dp"/>
+        android:textColor="@color/white"
+        android:textSize="16.8sp"/>
 
     <Space
         android:layout_width="match_parent"
@@ -83,12 +83,12 @@
         android:id="@+id/badBtn"
         android:layout_width="206.3dp"
         android:layout_height="51.3dp"
-        android:backgroundTint="#66A4B9DA"
+        android:background="@drawable/btn_light_style"
         android:fontFamily="@font/pretendard"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:stateListAnimator="@null"
         android:text="@string/question_today_bad"
-        android:textSize="16.8sp"
-        app:cornerRadius="18.24dp"/>
+        android:textColor="@color/white"
+        android:textSize="16.8sp"/>
 </LinearLayout>
