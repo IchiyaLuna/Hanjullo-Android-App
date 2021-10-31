@@ -65,5 +65,14 @@
     <string name="why_happy_today">왜 oo 때문에\n 오늘이 좋았던거 같아?</string>
     <string name="number_of_char">0/140</string>
 
+    <string name="daily_end_point">1 POINT!</string>
+    <string name="daily_end">오늘 한 줄 채우기 완료!</string>
+    <string name="daily_end_around">Around me</string>
+    <string name="daily_end_in_front">In front of me</string>
+    <string name="daily_end_behind">Behind me</string>
+    <string name="daily_end_inside">Inside me</string>
+
+
+
 
 </resources>
