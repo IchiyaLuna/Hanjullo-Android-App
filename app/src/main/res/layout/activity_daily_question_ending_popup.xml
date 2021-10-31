@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".DailyQuestionEndingPopup">
+
+
+    <View
+        android:id="@+id/dailyEndBg"
+        android:layout_width="337.4dp"
+        android:layout_height="464dp"
+
+        android:layout_marginTop="96dp"
+        android:background="@drawable/daily_end_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
+
+    <TextView
+        android:id="@+id/dailyEndPoint"
+        android:layout_width="146dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="93dp"
+        android:fontFamily="@font/pretendardsemibold"
+        android:gravity="center"
+        android:text="@string/daily_end_point"
+
+        android:textColor="@color/white"
+        android:textSize="35sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dailyEndBg" />
+
+    <TextView
+        android:id="@+id/dailyEnd"
+        android:layout_width="211dp"
+        android:layout_height="27.36dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/pretendardmedium"
+        android:gravity="center"
+        android:text="@string/daily_end"
+
+        android:textColor="@color/white"
+        android:textSize="19sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyEndPoint" />
+
+    <TextView
+        android:id="@+id/dailyEndAround"
+        android:layout_width="100dp"
+        android:layout_height="28.5dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/pretendardsemibold"
+        android:gravity="center"
+        android:text="@string/daily_end_around"
+
+        android:textColor="@color/white"
+        android:textSize="19sp"
+
+        app:layout_constraintStart_toStartOf="@+id/dailyEndBg"
+        app:layout_constraintTop_toBottomOf="@+id/dailyEnd" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="270dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/dailyEndBg"
+        app:layout_constraintTop_toBottomOf="@+id/dailyEndAround">
+
+    </View>
+
+    <TextView
+        android:id="@+id/dailyEndInFront"
+        android:layout_width="106dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="38dp"
+        android:fontFamily="@font/pretendardmedium"
+        android:gravity="center"
+        android:text="@string/daily_end_in_front"
+
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
+        app:layout_constraintStart_toEndOf="@+id/dailyEndBg"
+        app:layout_constraintStart_toStartOf="@+id/dailyEndBg" />
+
+    <ImageView
+        android:id="@+id/dailyEndInFrontBtn"
+        android:layout_width="22.8dp"
+        android:layout_height="22.8dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
+        app:layout_constraintStart_toEndOf="@+id/dailyEndInFront"
+        android:contentDescription="@string/in_front_of_me_btn"
+        app:srcCompat="@drawable/arrow_btn_light" />
+
+    <TextView
+        android:id="@+id/dailyEndBehind"
+        android:layout_width="84dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="22dp"
+        android:fontFamily="@font/pretendardmedium"
+        android:gravity="center"
+
+        android:text="@string/daily_end_behind"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/dailyEndInFront"
+        app:layout_constraintStart_toEndOf="@+id/dailyEndBg"
+        app:layout_constraintStart_toStartOf="@+id/dailyEndBg" />
+
+    <ImageView
+        android:id="@+id/dailyEndBehindBtn"
+        android:layout_width="22.8dp"
+        android:layout_height="22.8dp"
+
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="83dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
+        app:layout_constraintStart_toEndOf="@+id/dailyEndBehind"
+        android:contentDescription="@string/behind_me_btn"
+        app:srcCompat="@drawable/arrow_btn_light" />
+
+    <TextView
+        android:id="@+id/dailyEndInside"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="22dp"
+        android:fontFamily="@font/pretendardmedium"
+
+        android:gravity="center"
+        android:text="@string/daily_end_inside"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/dailyEndBehind"
+        app:layout_constraintStart_toEndOf="@+id/dailyEndBg"
+        app:layout_constraintStart_toStartOf="@+id/dailyEndBg" />
+
+    <ImageView
+        android:id="@+id/dailyEndInsideBtn"
+        android:layout_width="22.8dp"
+        android:layout_height="22.8dp"
+
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="132dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
+        app:layout_constraintStart_toEndOf="@+id/dailyEndInside"
+        android:contentDescription="@string/inside_me_btn"
+        app:srcCompat="@drawable/arrow_btn_light" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
