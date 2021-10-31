@@ -4,9 +4,11 @@
     <string name="profile_image">ProfileImage</string>
     <string name="around_me_bg_image">AroundMeImage</string>
 
-
     <string name="hello_text">님, 안녕 !</string>
-    <string name="name_text_default">XX</string>
+    <string name="name_text_default">딸기크레페냠냠</string>
+
+    <string name="today_answer">오늘의 한 줄 답변하기</string>
+
     <string name="today_text_default">Today</string>
     <string name="today_num_default">0</string>
     <string name="today_slash">/</string>
@@ -33,9 +35,9 @@
     <string name="ranking_btn">RankingBtn</string>
     <string name="calendar_btn">CalendarBtn</string>
     <string name="setting_btn">SettingBtn</string>
-    
+
     <string name="question_today_text">오늘 하루는 어땠어?</string>
-    
+
     <string name="question_today_best">최고야</string>
     <string name="question_today_good">좋아</string>
     <string name="question_today_nice">괜찮아</string>
@@ -43,6 +45,12 @@
     <string name="question_today_bad">별로야</string>
 
     <string name="next_text">다음</string>
+
+    <string name="question_what_best">최고?</string>
+    <string name="question_what_good">어떤 좋음이었어?</string>
+    <string name="question_what_nice">괜찮?</string>
+    <string name="question_what_not_bad">그냥 그래?</string>
+    <string name="question_what_bad">별로?</string>
 
     <string name="answer_best">BestBtn</string>
     <string name="answer_good">GoodBtn</string>
@@ -56,7 +64,6 @@
 
     <string name="why_happy_today">왜 oo 때문에\n 오늘이 좋았던거 같아?</string>
     <string name="number_of_char">0/140</string>
-
 
 
 </resources>
