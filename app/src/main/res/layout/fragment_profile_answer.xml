@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/answerTodayFragmentWidth"
+    android:layout_height="@dimen/answerTodayFragmentHeight"
+    tools:context=".ProfileAnswerFragment">
+
+    <Button
+        android:id="@+id/todayAnswerBtn"
+        android:layout_width="@dimen/answerTodayFragmentWidth"
+        android:layout_height="@dimen/answerTodayFragmentHeight"
+
+        android:background="@drawable/answer_btn_bg"
+
+        android:fontFamily="@font/pretendardmedium"
+        android:stateListAnimator="@null"
+
+        android:text="@string/today_answer"
+
+        android:textColor="@color/white"
+        android:textSize="@dimen/answerBtnTextSize" />
+
+</FrameLayout>
