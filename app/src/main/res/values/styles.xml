@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="regularWhite" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/pretendard</item>
+    </style>
+
+    <style name="mediumWhite" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/pretendardmedium</item>
+    </style>
+
+    <style name="semiBoldWhite" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/pretendardsemibold</item>
+    </style>
+
+    <style name="boldWhite" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/pretendardbold</item>
+    </style>
+</resources>
