@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -46,7 +48,7 @@ public class DailyQuestionChoiceActivity extends AppCompatActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        transaction.setCustomAnimations(R.anim.faid_in,R.anim.faid_out);
+        //transaction.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
 
         switch (fragCode) {
             case 1:
@@ -78,6 +80,7 @@ public class DailyQuestionChoiceActivity extends AppCompatActivity {
 
         TextView questionText = (TextView) findViewById(R.id.todayQuestionText);
 
+        //questionText.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_out));
         switch (currentSelect) {
             case 1:
                 questionText.setText(R.string.question_what_best);
@@ -95,6 +98,7 @@ public class DailyQuestionChoiceActivity extends AppCompatActivity {
                 questionText.setText(R.string.question_what_bad);
                 break;
         }
+        //questionText.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in));
     }
 
     private void getWhat() {
