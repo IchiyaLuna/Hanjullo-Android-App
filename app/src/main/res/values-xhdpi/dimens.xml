@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="match_parent" format="integer" type="dimen">-1</item>
+    <item name="wrap_content" format="integer" type="dimen">-2</item>
+
+    <dimen name="profileImageWidth">161dp</dimen>
+    <dimen name="profileImageHeight">161dp</dimen>
+    <dimen name="profileImageTop">65dp</dimen>
+    <dimen name="profileImageBottom">414dp</dimen>
+
+    <dimen name="ellipseWidth">260.5dp</dimen>
+    <dimen name="ellipseHeight">161dp</dimen>
+
+    <dimen name="helloWidth">260dp</dimen>
+    <dimen name="helloHeight">@dimen/wrap_content</dimen>
+    <dimen name="helloTop">241.5dp</dimen>
+    <dimen name="helloBottom">375.5dp</dimen>
+    <dimen name="helloTextSize">22sp</dimen>
+
+    <dimen name="answerTodayFragmentWidth">180.5dp</dimen>
+    <dimen name="answerTodayFragmentHeight">30dp</dimen>
+    <dimen name="answerTodayFragmentTop">271.5dp</dimen>
+    <dimen name="answerTodayFragmentBottom">338.5dp</dimen>
+
+    <dimen name="answerBtnWidth">180.5dp</dimen>
+    <dimen name="answerBtnHeight">30dp</dimen>
+    <dimen name="answerBtnTextSize">16.5sp</dimen>
+
+    <dimen name="todayWidth">100dp</dimen>
+    <dimen name="todayHeight">@dimen/wrap_content</dimen>
+    <dimen name="todayTop">275dp</dimen>
+    <dimen name="todayBottom">351.5dp</dimen>
+    <dimen name="todayTextSize">14.5sp</dimen>
+
+    <dimen name="aroundMeTitleWidth">235dp</dimen>
+    <dimen name="aroundMeTitleHeight">@dimen/wrap_content</dimen>
+    <dimen name="aroundMeTitleTop">312.5dp</dimen>
+    <dimen name="aroundMeTitleBottom">314dp</dimen>
+    <dimen name="aroundMeTitleTextSize">18sp</dimen>
+    <dimen name="aroundMeTagTextSize">11sp</dimen>
+
+    <dimen name="aroundMeTodayBgWidth">260dp</dimen>
+    <dimen name="aroundMeTodayBgHeight">30dp</dimen>
+    <dimen name="aroundMeTodayBgTop">333.5dp</dimen>
+    <dimen name="aroundMeTodayBgBottom">276.5dp</dimen>
+    <dimen name="aroundMeTodayTextSize">14.5sp</dimen>
+
+    <dimen name="meLayoutWidth">124dp</dimen>
+    <dimen name="meLayoutHeight">@dimen/wrap_content</dimen>
+    <dimen name="meMenuTextSize">18sp</dimen>
+
+    <dimen name="insideMeLayoutTop">396.5dp</dimen>
+    <dimen name="insideMeLayoutBottom">223.5dp</dimen>
+
+    <dimen name="behindMeLayoutTop">439dp</dimen>
+    <dimen name="behindMeLayoutBottom">181dp</dimen>
+
+    <dimen name="frontMeLayoutTop">480dp</dimen>
+    <dimen name="frontMeLayoutBottom">140dp</dimen>
+
+    <dimen name="menuBarWidth">303dp</dimen>
+    <dimen name="menuBarHeight">33.5dp</dimen>
+    <dimen name="menuBarTop">564dp</dimen>
+    <dimen name="menuBarBottom">42.5dp</dimen>
+    <dimen name="menuBtnSize">33.5dp</dimen>
+
+
+
+
+    <dimen name="dailyQuestionWidth">@dimen/wrap_content</dimen>
+    <dimen name="dailyQuestionHeight">@dimen/wrap_content</dimen>
+    <dimen name="dailyQuestionTop">122.5dp</dimen>
+    <dimen name="dailyQuestionBottom">500.5dp</dimen>
+    <dimen name="dailyQuestionTextSize">19sp</dimen>
+
+    <dimen name="dailyAnswerWidth">181dp</dimen>
+    <dimen name="dailyAnswerHeight">277dp</dimen>
+    <dimen name="dailyAnswerTop">178dp</dimen>
+    <dimen name="dailyAnswerBottom">185dp</dimen>
+
+    <dimen name="nextBtnWidth">58.5dp</dimen>
+    <dimen name="nextBtnHeight">31.5dp</dimen>
+    <dimen name="nextBtnTop">503dp</dimen>
+    <dimen name="nextBtnBottom">105.5dp</dimen>
+    <dimen name="nextBtnTextSize">11sp</dimen>
+
+    <dimen name="howBtnWidth">181dp</dimen>
+    <dimen name="howBtnHeight">45dp</dimen>
+    <dimen name="howBtnTextSize">15.5sp</dimen>
+</resources>
