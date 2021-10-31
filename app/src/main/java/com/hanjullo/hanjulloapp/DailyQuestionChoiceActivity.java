@@ -46,6 +46,8 @@ public class DailyQuestionChoiceActivity extends AppCompatActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
+        transaction.setCustomAnimations(R.anim.faid_in,R.anim.faid_out);
+
         switch (fragCode) {
             case 1:
                 DailyHowFragment fragHow = new DailyHowFragment();
