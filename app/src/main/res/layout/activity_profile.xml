@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,334 +8,315 @@
     android:background="@drawable/background100"
     tools:context=".ProfileActivity">
 
-    <ImageView
-        android:id="@+id/ellipseLine"
-        android:layout_width="@dimen/ellipseWidth"
-        android:layout_height="@dimen/ellipseHeight"
-
-        android:contentDescription="@string/ellipse"
-        app:layout_constraintEnd_toEndOf="@+id/profileImg"
-
-        app:layout_constraintTop_toTopOf="@+id/profileImg"
-        app:srcCompat="@drawable/ellipse" />
-
-    <ImageView
-        android:id="@+id/profileImg"
-        android:layout_width="@dimen/profileImageWidth"
-        android:layout_height="@dimen/profileImageHeight"
-
-        android:layout_marginTop="@dimen/profileImageTop"
-        android:layout_marginBottom="@dimen/profileImageBottom"
-        android:contentDescription="@string/profile_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile_img_blank" />
-
-    <LinearLayout
-        android:id="@+id/helloLayout"
-        android:layout_width="@dimen/helloWidth"
-        android:layout_height="@dimen/helloHeight"
-
-        android:layout_marginTop="@dimen/helloTop"
-        android:layout_marginBottom="@dimen/helloBottom"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/nameText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-
-            android:fontFamily="@font/pretendardbold"
-            android:gravity="end"
-            android:includeFontPadding="false"
-            android:letterSpacing="-0.05"
-            android:text="@string/name_text_default"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/helloTextSize" />
-
-        <TextView
-            android:id="@+id/helloText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-
-            android:fontFamily="@font/pretendardbold"
-            android:gravity="start"
-            android:includeFontPadding="false"
-            android:letterSpacing="-0.05"
-            android:text="@string/hello_text"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/helloTextSize" />
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:id="@+id/aroundMeTitleLayout"
-        android:layout_width="@dimen/aroundMeTitleWidth"
-        android:layout_height="@dimen/aroundMeTitleHeight"
-
-        android:layout_marginTop="@dimen/aroundMeTitleTop"
-        android:layout_marginBottom="@dimen/aroundMeTitleBottom"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/aroundMeTitleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:fontFamily="@font/pretendardsemibold"
-            android:gravity="center_vertical|start"
-            android:includeFontPadding="false"
-            android:text="@string/around_me_text"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/aroundMeTitleTextSize" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/keywordText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-
-            android:fontFamily="@font/pretendard"
-            android:gravity="bottom|end"
-            android:includeFontPadding="false"
-            android:text="@string/keyword_text"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/aroundMeTagTextSize" />
-
-        <Space
-            android:layout_width="6dp"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/tagTextA"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-
-            android:fontFamily="@font/pretendard"
-            android:gravity="bottom|center"
-            android:includeFontPadding="false"
-            android:text="@string/keyword_default"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/aroundMeTagTextSize" />
-
-        <Space
-            android:layout_width="4dp"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/tagTextB"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-
-            android:fontFamily="@font/pretendard"
-            android:gravity="bottom|center"
-            android:includeFontPadding="false"
-            android:text="@string/keyword_default"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/aroundMeTagTextSize" />
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/aroundMeBg"
-        android:layout_width="@dimen/aroundMeTodayBgWidth"
-        android:layout_height="@dimen/aroundMeTodayBgHeight"
-
-        android:layout_marginTop="@dimen/aroundMeTodayBgTop"
-        android:layout_marginBottom="@dimen/aroundMeTodayBgBottom"
-        android:contentDescription="@string/around_me_bg_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/around_me_bg" />
-
-    <TextView
-        android:id="@+id/aroundMeText"
-        android:layout_width="wrap_content"
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:fontFamily="@font/pretendard"
-        android:gravity="center"
-        android:letterSpacing="-0.05"
-        android:text="@string/around_me_example"
-
-        android:textColor="@color/white"
-        android:textSize="@dimen/aroundMeTodayTextSize"
-        app:layout_constraintBottom_toBottomOf="@+id/aroundMeBg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="@+id/aroundMeBg" />
-
-    <LinearLayout
-        android:id="@+id/insideMeLayout"
-        android:layout_width="@dimen/meLayoutWidth"
-        android:layout_height="@dimen/meLayoutHeight"
-
-        android:layout_marginTop="@dimen/insideMeLayoutTop"
-        android:layout_marginBottom="@dimen/insideMeLayoutBottom"
-        android:orientation="horizontal"
-
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/aroundMeTitleLayout"
+        app:scale_base_width="360"
+        app:scale_base_height="640" >
 
-        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/ellipseLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="0"
+            app:scale_top="65"
+            app:scale_width="261"
+            app:scale_height="162"
+
+            android:contentDescription="@string/ellipse"
+            app:srcCompat="@drawable/ellipse" />
+
+
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:contentDescription="@string/profile_image"
+            app:scale_height="162"
+            app:scale_left="99"
+            app:scale_top="65"
+
+            app:scale_width="162"
+            app:srcCompat="@drawable/profile_img_blank" />
+
+        <LinearLayout
+            android:id="@+id/helloLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="0"
+            app:scale_top="241"
+            app:scale_width="360"
+            app:scale_height="26"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:fontFamily="@font/font_pretendard_bold"
+                android:gravity="center_vertical|end"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/name_text_default"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/helloTextSize" />
+
+            <TextView
+                android:id="@+id/helloText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:fontFamily="@font/font_pretendard_bold"
+                android:gravity="center_vertical|start"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/hello_text"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/helloTextSize" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/answerTodayFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="90"
+            app:scale_top="272"
+            app:scale_width="181"
+            app:scale_height="30">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/aroundMeTitleLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="60"
+            app:scale_top="310
+"
+            app:scale_width="240"
+            app:scale_height="18"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aroundMeTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/font_pretendard_semibold"
+                android:gravity="center_vertical|start"
+                android:includeFontPadding="false"
+                android:text="@string/around_me_text"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/aroundMeTitleTextSize" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/keywordText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:fontFamily="@font/font_pretendard_regular"
+                android:gravity="bottom|end"
+                android:includeFontPadding="false"
+                android:text="@string/keyword_text"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/aroundMeTagTextSize" />
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tagTextA"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:fontFamily="@font/font_pretendard_regular"
+                android:gravity="bottom|center"
+                android:includeFontPadding="false"
+                android:text="@string/keyword_default"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/aroundMeTagTextSize" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tagTextB"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:fontFamily="@font/font_pretendard_regular"
+                android:gravity="bottom|center"
+                android:includeFontPadding="false"
+                android:text="@string/keyword_default"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/aroundMeTagTextSize" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="50"
+            app:scale_top="334"
+            app:scale_width="260"
+            app:scale_height="30" >
+
+            <ImageView
+                android:id="@+id/aroundMeBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:contentDescription="@string/around_me_bg_image"
+                app:srcCompat="@drawable/around_me_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/aroundMeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/font_pretendard_regular"
+                android:gravity="center"
+                android:letterSpacing="-0.05"
+                android:text="@string/around_me_example"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/aroundMeTodayTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/insideMeText"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            android:fontFamily="@font/pretendardsemibold"
-            android:gravity="start"
+            app:scale_left="60"
+            app:scale_top="399"
+            app:scale_width="80"
+            app:scale_height="20"
+            app:scale_textsize="17"
+
+            android:fontFamily="@font/font_pretendard_semibold"
+            android:gravity="center_vertical|start"
             android:letterSpacing="-0.04"
-
+            android:includeFontPadding="false"
             android:text="@string/inside_me_text"
-            android:textColor="@color/white"
+            android:textColor="@color/white" />
 
-            android:textSize="@dimen/meMenuTextSize" />
-
-        <ImageButton
+        <ImageView
             android:id="@+id/insideMeBtn"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-            android:background="@drawable/arrow_btn_bg_dark"
-            android:contentDescription="@string/inside_me_btn"
+            app:scale_left="164"
+            app:scale_top="399"
+            app:scale_width="20"
+            app:scale_height="20"
 
-            android:scaleType="fitCenter" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/behindMeLayout"
-        android:layout_width="@dimen/meLayoutWidth"
-        android:layout_height="@dimen/meLayoutHeight"
-
-        android:layout_marginTop="@dimen/behindMeLayoutTop"
-        android:layout_marginBottom="@dimen/behindMeLayoutBottom"
-        android:orientation="horizontal"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/aroundMeTitleLayout"
-
-        app:layout_constraintTop_toTopOf="parent">
+            app:srcCompat="@drawable/arrow_btn_light"
+            android:contentDescription="@string/inside_me_btn" />
 
         <TextView
             android:id="@+id/behindMeText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            android:fontFamily="@font/pretendardsemibold"
-            android:gravity="start"
+            app:scale_left="60"
+            app:scale_top="440"
+            app:scale_width="90"
+            app:scale_height="20"
+            app:scale_textsize="17"
+
+            android:fontFamily="@font/font_pretendard_semibold"
+            android:gravity="center_vertical|start"
             android:letterSpacing="-0.04"
             android:text="@string/behind_me_text"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/meMenuTextSize" />
+            android:textColor="@color/white" />
 
         <ImageView
             android:id="@+id/behindMeBtn"
             android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            app:scale_left="164"
+            app:scale_top="440"
+            app:scale_width="20"
+            app:scale_height="20"
+
             android:contentDescription="@string/behind_me_btn"
             app:srcCompat="@drawable/arrow_btn_light" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/frontMeLayout"
-        android:layout_width="@dimen/meLayoutWidth"
-        android:layout_height="@dimen/meLayoutHeight"
-
-        android:layout_marginTop="@dimen/frontMeLayoutTop"
-        android:layout_marginBottom="@dimen/frontMeLayoutBottom"
-        android:orientation="horizontal"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/aroundMeTitleLayout"
-
-        app:layout_constraintTop_toTopOf="parent">
-
         <TextView
             android:id="@+id/frontMeText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
 
-            android:fontFamily="@font/pretendardsemibold"
-            android:gravity="start"
+            app:scale_left="60"
+            app:scale_top="482"
+            app:scale_width="100"
+            app:scale_height="20"
+            app:scale_textsize="17"
+
+            android:fontFamily="@font/font_pretendard_semibold"
+            android:gravity="center_vertical|start"
             android:letterSpacing="-0.04"
             android:text="@string/in_front_of_me_text"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/meMenuTextSize" />
+            android:textColor="@color/white" />
 
         <ImageView
             android:id="@+id/frontMeBtn"
             android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            app:scale_left="164"
+            app:scale_top="482"
+            app:scale_width="20"
+            app:scale_height="20"
+
             android:contentDescription="@string/in_front_of_me_btn"
             app:srcCompat="@drawable/arrow_btn_light" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/menuBarLayout"
-        android:layout_width="@dimen/menuBarWidth"
-        android:layout_height="@dimen/menuBarHeight"
-
-        android:layout_marginTop="@dimen/menuBarTop"
-        android:layout_marginBottom="@dimen/menuBarBottom"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent">
-
 
         <ImageButton
             android:id="@+id/profileBtn"
-            android:layout_width="@dimen/menuBtnSize"
-            android:layout_height="@dimen/menuBtnSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="30"
+            app:scale_top="564"
+            app:scale_width="36"
+            app:scale_height="36"
 
             android:background="@color/transparent"
             android:contentDescription="@string/profile_btn"
@@ -342,14 +324,16 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/profile_icon" />
 
-        <Space
-            android:layout_width="56dp"
-            android:layout_height="match_parent" />
 
         <ImageButton
             android:id="@+id/rankingBtn"
-            android:layout_width="@dimen/menuBtnSize"
-            android:layout_height="@dimen/menuBtnSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="118"
+            app:scale_top="564"
+            app:scale_width="36"
+            app:scale_height="36"
 
             android:background="@color/transparent"
             android:contentDescription="@string/ranking_btn"
@@ -357,50 +341,45 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/rank_icon" />
 
-        <Space
-            android:layout_width="56dp"
-            android:layout_height="match_parent" />
 
-        <ImageButton
-            android:id="@+id/calendarBtn"
-            android:layout_width="@dimen/menuBtnSize"
-            android:layout_height="@dimen/menuBtnSize"
+            <ImageButton
+                android:id="@+id/calendarBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:background="@color/transparent"
-            android:contentDescription="@string/calendar_btn"
+                app:scale_left="206"
+                app:scale_top="564"
+                app:scale_width="36"
+                app:scale_height="36"
 
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/calendar_icon" />
+                android:background="@color/transparent"
+                android:contentDescription="@string/calendar_btn"
 
-        <Space
-            android:layout_width="56dp"
-            android:layout_height="match_parent" />
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/calendar_icon" />
 
-        <ImageButton
-            android:id="@+id/settingBtn"
-            android:layout_width="@dimen/menuBtnSize"
-            android:layout_height="@dimen/menuBtnSize"
 
-            android:background="@color/transparent"
-            android:contentDescription="@string/setting_btn"
+            <ImageButton
+                android:id="@+id/settingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/setting_icon" />
-    </LinearLayout>
+                app:scale_left="294"
+                app:scale_top="564"
+                app:scale_width="36"
+                app:scale_height="36"
 
-    <FrameLayout
-        android:id="@+id/answerTodayFrame"
-        android:layout_width="@dimen/answerTodayFragmentWidth"
-        android:layout_height="@dimen/answerTodayFragmentHeight"
+                android:background="@color/transparent"
+                android:contentDescription="@string/setting_btn"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/setting_icon" />
 
-        android:layout_marginTop="@dimen/answerTodayFragmentTop"
-        android:layout_marginBottom="@dimen/answerTodayFragmentBottom">
+    </com.ssomai.android.scalablelayout.ScalableLayout>
 
-    </FrameLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
