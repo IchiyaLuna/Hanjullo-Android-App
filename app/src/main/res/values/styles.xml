@@ -2,21 +2,21 @@
 <resources>
     <style name="regularWhite" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">@font/pretendard</item>
+        <item name="android:fontFamily">@font/pretendard_regular</item>
     </style>
 
     <style name="mediumWhite" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">@font/pretendardmedium</item>
+        <item name="android:fontFamily">@font/pretendard_medium</item>
     </style>
 
     <style name="semiBoldWhite" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">@font/pretendardsemibold</item>
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
     </style>
 
     <style name="boldWhite" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">@font/pretendardbold</item>
+        <item name="android:fontFamily">@font/pretendard_bold</item>
     </style>
 </resources>
