@@ -43,7 +43,7 @@
     <dimen name="aroundMeTodayBgHeight">30dp</dimen>
     <dimen name="aroundMeTodayBgTop">333.5dp</dimen>
     <dimen name="aroundMeTodayBgBottom">276.5dp</dimen>
-    <dimen name="aroundMeTodayTextSize">14.5sp</dimen>
+    <dimen name="aroundMeTodayTextSize">16sp</dimen>
 
     <dimen name="meLayoutWidth">124dp</dimen>
     <dimen name="meLayoutHeight">@dimen/wrap_content</dimen>
