@@ -6,9 +6,9 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/pretendard"
+        android:font="@font/pretendard_semibold"
         app:fontStyle="normal"
         app:fontWeight="400"
-        app:font="@font/pretendard"/>
+        app:font="@font/pretendard_semibold"/>
 
 </font-family>
