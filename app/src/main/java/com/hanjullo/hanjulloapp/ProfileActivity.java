@@ -1,12 +1,10 @@
 package com.hanjullo.hanjulloapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -17,16 +15,11 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         switchFragment(isTodayAnswerTrue);
-
     }
 
     public void startDailyQuestion() {
         Intent intent = new Intent(getApplicationContext(), DailyQuestionChoiceActivity.class);
         startActivity(intent);
-    }
-
-    public void answerFinished() {
-        isTodayAnswerTrue = true;
     }
 
     private void switchFragment(boolean answer) {
