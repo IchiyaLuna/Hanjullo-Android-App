@@ -12,7 +12,7 @@
 
         android:background="@drawable/answer_btn_bg"
 
-        android:fontFamily="@font/pretendardmedium"
+        android:fontFamily="@font/pretendard_medium"
         android:stateListAnimator="@null"
 
         android:text="@string/today_answer"

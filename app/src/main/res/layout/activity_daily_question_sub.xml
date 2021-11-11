@@ -12,7 +12,7 @@
         android:layout_width="213.2dp"
         android:layout_height="54.15dp"
         android:layout_marginTop="133dp"
-        android:fontFamily="@font/pretendardmedium"
+        android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
         android:text="@string/why_happy_today"
 
@@ -46,7 +46,7 @@
         android:layout_height="18.24dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="25dp"
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
         android:gravity="center"
 
         android:text="@string/number_of_char"
@@ -62,7 +62,7 @@
         android:layout_height="35.8dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/btn_medium_style"
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
 
         android:stateListAnimator="@null"
         android:text="@string/next_text"

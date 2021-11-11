@@ -27,7 +27,7 @@
         android:layout_width="146dp"
         android:layout_height="54dp"
         android:layout_marginTop="93dp"
-        android:fontFamily="@font/pretendardsemibold"
+        android:fontFamily="@font/pretendard_semibold"
         android:gravity="center"
         android:text="@string/daily_end_point"
 
@@ -43,7 +43,7 @@
         android:layout_width="211dp"
         android:layout_height="27.36dp"
         android:layout_marginTop="2dp"
-        android:fontFamily="@font/pretendardmedium"
+        android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
         android:text="@string/daily_end"
 
@@ -60,7 +60,7 @@
         android:layout_height="28.5dp"
         android:layout_marginStart="38dp"
         android:layout_marginTop="80dp"
-        android:fontFamily="@font/pretendardsemibold"
+        android:fontFamily="@font/pretendard_semibold"
         android:gravity="center"
         android:text="@string/daily_end_around"
 
@@ -89,7 +89,7 @@
         android:layout_height="25dp"
         android:layout_marginStart="38dp"
         android:layout_marginBottom="38dp"
-        android:fontFamily="@font/pretendardmedium"
+        android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
         android:text="@string/daily_end_in_front"
 
@@ -116,7 +116,7 @@
         android:layout_height="25dp"
         android:layout_marginStart="38dp"
         android:layout_marginBottom="22dp"
-        android:fontFamily="@font/pretendardmedium"
+        android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
 
         android:text="@string/daily_end_behind"
@@ -144,7 +144,7 @@
         android:layout_height="25dp"
         android:layout_marginStart="38dp"
         android:layout_marginBottom="22dp"
-        android:fontFamily="@font/pretendardmedium"
+        android:fontFamily="@font/pretendard_medium"
 
         android:gravity="center"
         android:text="@string/daily_end_inside"

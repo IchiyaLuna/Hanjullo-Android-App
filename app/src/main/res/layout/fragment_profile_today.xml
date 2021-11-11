@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
 
-            android:fontFamily="@font/pretendard"
+            android:fontFamily="@font/pretendard_regular"
             android:gravity="end"
             android:includeFontPadding="false"
             android:letterSpacing="-0.05"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
 
-            android:fontFamily="@font/pretendard"
+            android:fontFamily="@font/pretendard_regular"
             android:gravity="end"
             android:includeFontPadding="false"
             android:letterSpacing="-0.05"
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:fontFamily="@font/pretendard"
+            android:fontFamily="@font/pretendard_regular"
             android:gravity="center_horizontal"
             android:includeFontPadding="false"
             android:text="@string/today_slash"
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
 
-            android:fontFamily="@font/pretendard"
+            android:fontFamily="@font/pretendard_regular"
             android:gravity="start"
             android:includeFontPadding="false"
             android:letterSpacing="-0.05"

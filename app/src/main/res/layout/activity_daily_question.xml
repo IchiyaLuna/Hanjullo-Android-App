@@ -13,7 +13,7 @@
         android:layout_width="@dimen/dailyQuestionWidth"
         android:layout_height="@dimen/dailyQuestionHeight"
 
-        android:fontFamily="@font/pretendardmedium"
+        android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
         android:textColor="@color/white"
         android:letterSpacing="-0.05"
@@ -50,7 +50,7 @@
         android:layout_height="@dimen/nextBtnHeight"
         android:background="@drawable/btn_medium_style"
 
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/nextBtnTextSize"
 

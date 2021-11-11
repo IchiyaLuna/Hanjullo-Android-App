@@ -14,7 +14,7 @@
 
         android:background="@drawable/btn_light_style"
 
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/howBtnTextSize"
 
@@ -22,10 +22,6 @@
 
         android:text="@string/question_today_best" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
 
     <Button
         android:id="@+id/goodBtn"
@@ -33,7 +29,7 @@
         android:layout_height="@dimen/howBtnHeight"
         android:background="@drawable/btn_light_style"
 
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/howBtnTextSize"
 
@@ -41,10 +37,6 @@
 
         android:text="@string/question_today_good" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
 
     <Button
         android:id="@+id/niceBtn"
@@ -53,7 +45,7 @@
 
         android:background="@drawable/btn_light_style"
 
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/howBtnTextSize"
 
@@ -61,10 +53,6 @@
 
         android:text="@string/question_today_nice"/>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
 
     <Button
         android:id="@+id/notBadBtn"
@@ -73,7 +61,7 @@
 
         android:background="@drawable/btn_light_style"
 
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/howBtnTextSize"
 
@@ -81,10 +69,6 @@
 
         android:text="@string/question_today_not_bad"/>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
 
     <Button
         android:id="@+id/badBtn"
@@ -93,7 +77,7 @@
 
         android:background="@drawable/btn_light_style"
 
-        android:fontFamily="@font/pretendard"
+        android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/howBtnTextSize"
 
