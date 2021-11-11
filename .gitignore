@@ -36,3 +36,4 @@ local.properties
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 .idea/assertWizardSettings.xml
+misc.xml
