@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ranking">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:scale_base_width="360"
+        app:scale_base_height="640" >
+
+        <TextView
+            android:id="@+id/rankingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_bold"
+
+            app:scale_left="131"
+            app:scale_top="100"
+            app:scale_width="97"
+            app:scale_height="20"
+            app:scale_textsize="20"
+
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="@string/ranking_ranking"
+
+            android:textColor="@color/white"
+
+            />
+
+        <TextView
+            android:id="@+id/rankingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_medium"
+
+            app:scale_left="138"
+            app:scale_top="132"
+            app:scale_width="84"
+            app:scale_height="15"
+            app:scale_textsize="14"
+
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/ranking_date"
+
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/rankingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_regular"
+
+            app:scale_left="137"
+            app:scale_top="190"
+            app:scale_width="30"
+            app:scale_height="9"
+            app:scale_textsize="9"
+
+
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/ranking_name"
+
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/rankingPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_regular"
+
+            app:scale_left="233"
+            app:scale_top="187"
+            app:scale_width="26"
+            app:scale_height="13"
+            app:scale_textsize="9"
+
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/ranking_point"
+
+            android:textColor="@color/white"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rankingScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            app:scale_left="49"
+            app:scale_top="205"
+            app:scale_width="262"
+            app:scale_height="227"
+
+
+            android:background="@drawable/daily_end_bg">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/myRankingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_regular"
+
+            app:scale_left="76"
+            app:scale_top="457"
+            app:scale_width="16"
+            app:scale_height="8"
+            app:scale_textsize="8"
+
+
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/my_ranking_text"
+
+            android:textColor="@color/white"
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="49"
+            app:scale_top="473"
+            app:scale_width="262"
+            app:scale_height="31"
+
+
+            android:background="@drawable/daily_end_bg"
+            />
+
+        <TextView
+            android:id="@+id/myRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_regular"
+
+            app:scale_left="80"
+            app:scale_top="482"
+            app:scale_width="8"
+            app:scale_height="12"
+            app:scale_textsize="12"
+
+
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/my_ranking"
+
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/myRankingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_regular"
+
+            app:scale_left="122"
+            app:scale_top="482"
+            app:scale_height="14"
+            app:scale_textsize="12"
+
+
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/my_ranking_name"
+
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/myRankingPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/pretendard_regular"
+
+            app:scale_left="250"
+            app:scale_top="482"
+            app:scale_width="32"
+            app:scale_height="15"
+            app:scale_textsize="12"
+
+
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/my_ranking_point"
+
+            android:textColor="@color/white"
+            />
+
+
+
+
+
+
+</com.ssomai.android.scalablelayout.ScalableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
