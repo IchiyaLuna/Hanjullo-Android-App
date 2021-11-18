@@ -109,7 +109,7 @@
             app:scale_height="227"
 
 
-            android:background="@drawable/daily_end_bg">
+            android:background="@drawable/bg_daily_end">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -144,7 +144,7 @@
             app:scale_height="31"
 
 
-            android:background="@drawable/daily_end_bg"
+            android:background="@drawable/bg_daily_end"
             />
 
         <TextView

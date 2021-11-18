@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg_app_100"
     tools:context=".HomePopup">
 
     <View
@@ -13,7 +13,7 @@
         android:layout_height="311dp"
 
         android:layout_marginTop="120dp"
-        android:background="@drawable/daily_end_bg"
+        android:background="@drawable/bg_daily_end"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
