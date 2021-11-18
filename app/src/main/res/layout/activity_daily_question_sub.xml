@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg_app_100"
     tools:context=".DailyQuestionSubActivity">
 
     <TextView
@@ -31,7 +31,7 @@
         android:background="@drawable/why_happy_rounded_edittext"
         android:gravity="center"
 
-
+        android:inputType="text"
         android:textColor="@color/white"
         android:textSize="21sp"
 
