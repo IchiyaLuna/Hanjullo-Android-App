@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg_app_100"
     tools:context=".DailyQuestionEndingPopup">
 
 
@@ -108,7 +108,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
         app:layout_constraintStart_toEndOf="@+id/dailyEndInFront"
         android:contentDescription="@string/in_front_of_me_btn"
-        app:srcCompat="@drawable/arrow_btn_light" />
+        app:srcCompat="@drawable/btn_arrow_light" />
 
     <TextView
         android:id="@+id/dailyEndBehind"
@@ -136,7 +136,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
         app:layout_constraintStart_toEndOf="@+id/dailyEndBehind"
         android:contentDescription="@string/behind_me_btn"
-        app:srcCompat="@drawable/arrow_btn_light" />
+        app:srcCompat="@drawable/btn_arrow_light" />
 
     <TextView
         android:id="@+id/dailyEndInside"
@@ -164,7 +164,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
         app:layout_constraintStart_toEndOf="@+id/dailyEndInside"
         android:contentDescription="@string/inside_me_btn"
-        app:srcCompat="@drawable/arrow_btn_light" />
+        app:srcCompat="@drawable/btn_arrow_light" />
 
 
 
