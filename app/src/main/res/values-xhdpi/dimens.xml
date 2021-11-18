@@ -37,7 +37,7 @@
     <dimen name="aroundMeTitleTop">312.5dp</dimen>
     <dimen name="aroundMeTitleBottom">314dp</dimen>
     <dimen name="aroundMeTitleTextSize">18sp</dimen>
-    <dimen name="aroundMeTagTextSize">11sp</dimen>
+    <dimen name="aroundMeTagTextSize">13sp</dimen>
 
     <dimen name="aroundMeTodayBgWidth">260dp</dimen>
     <dimen name="aroundMeTodayBgHeight">30dp</dimen>
