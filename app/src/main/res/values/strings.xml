@@ -3,6 +3,7 @@
     <string name="ellipse">EllipseLine</string>
     <string name="profile_image">ProfileImage</string>
     <string name="around_me_bg_image">AroundMeImage</string>
+    <string name="add_btn">ImageAddBtn</string>
 
     <string name="hello_text">님, 안녕 !</string>
     <string name="name_text_default">딸기크레페냠냠</string>
