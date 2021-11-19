@@ -11,17 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HanjulloApp">
         <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".ranking"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DailyQuestionEndingPopup"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DailyQuestionSubActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DailyQuestionChoiceActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ProfileActivity"
             android:exported="true">
