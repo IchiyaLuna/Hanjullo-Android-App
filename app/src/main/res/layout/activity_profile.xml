@@ -343,7 +343,7 @@
             android:contentDescription="@string/profile_btn"
 
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/icon_profile" />
+            app:srcCompat="@drawable/btn_profile" />
 
 
         <ImageButton
@@ -360,7 +360,7 @@
             android:contentDescription="@string/ranking_btn"
 
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/icon_rank" />
+            app:srcCompat="@drawable/btn_rank" />
 
 
             <ImageButton
@@ -377,7 +377,7 @@
                 android:contentDescription="@string/calendar_btn"
 
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/icon_calendar" />
+                app:srcCompat="@drawable/btn_calendar" />
 
 
             <ImageButton
@@ -394,7 +394,7 @@
                 android:contentDescription="@string/setting_btn"
 
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/icon_setting" />
+                app:srcCompat="@drawable/btn_setting" />
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
