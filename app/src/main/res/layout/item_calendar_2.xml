@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:scale_base_width="360"
+        app:scale_base_height="60"
+        android:background="@drawable/bg_test_item_2">
+
+        <TextView
+            android:id="@+id/c_item2_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="50"
+            app:scale_top="15"
+            app:scale_width="60"
+            app:scale_height="30"
+            app:scale_textsize="20"
+
+            android:fontFamily="@font/font_pretendard_regular"
+            android:textColor="@color/white"
+
+            android:gravity="center"
+            android:text="@string/default_loading" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
