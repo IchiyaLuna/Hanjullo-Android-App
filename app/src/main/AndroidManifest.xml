@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HanjulloApp">
         <activity
+            android:name=".CalendarActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="false" />
         <activity
