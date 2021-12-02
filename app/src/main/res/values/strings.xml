@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">HanjulloApp</string>
+    <string name="app_name">한줄로</string>
+    <string name="default_loading">로딩중</string>
+
     <string name="ellipse">EllipseLine</string>
     <string name="profile_image">ProfileImage</string>
     <string name="around_me_bg_image">AroundMeImage</string>
@@ -86,5 +88,14 @@
     <string name="home_pop_Q_icon">Q.</string>
     <string name="home_pop_Question">1년전 나에게 해주고 싶은 말이 있다면?</string>
     <string name="home_pop_Answer">존버하자</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>
