@@ -40,7 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
             Intent intent;
             @Override
             public void onClick(View v) {
-                
+
                 switch (v.getId()) {
                     case R.id.calendarBtn:
                         intent = new Intent(getApplicationContext(), CalendarActivity.class);
