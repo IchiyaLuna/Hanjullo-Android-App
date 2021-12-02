@@ -18,5 +18,12 @@ public class AnswerList {
     @ColumnInfo(name = "daily_what")
     public String dailyWhat;
 
+    @ColumnInfo(name = "inside_me")
+    public String insideMe;
 
+    @ColumnInfo(name = "behind_me")
+    public String behindMe;
+
+    @ColumnInfo(name = "front_me")
+    public String frontMe;
 }

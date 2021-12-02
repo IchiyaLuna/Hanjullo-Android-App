@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_100"
-    tools:context=".SplashActivity">
+    tools:context=".CalendarActivity">
 
     <com.ssomai.android.scalablelayout.ScalableLayout
         android:layout_width="match_parent"
@@ -13,36 +13,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:scale_base_width="360"
-        app:scale_base_height="640">
+        app:scale_base_height="640" >
 
-
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarRecyclerView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:scale_left="0"
+            app:scale_top="110"
+            app:scale_width="360"
+            app:scale_height="420"
 
-            app:scale_height="64"
-            app:scale_left="91"
-            app:scale_top="258"
-            app:scale_width="178"
-
-            app:srcCompat="@drawable/img_splash_logo" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:indeterminate="true"
-            android:indeterminateBehavior="repeat"
-            android:indeterminateOnly="true"
-            android:indeterminateTint="#FFFFFF"
-            app:scale_height="50"
-            app:scale_left="155"
-            app:scale_top="396"
-            app:scale_width="50" />
-
+            tools:listitem="@layout/item_calendar_1"/>
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
