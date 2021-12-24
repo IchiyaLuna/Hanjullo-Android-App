@@ -77,11 +77,11 @@
                 android:fontFamily="@font/font_pretendard_bold"
                 android:gravity="center_vertical|end"
                 android:includeFontPadding="false"
-                android:letterSpacing="-0.05"
-                android:text="@string/name_text_default"
+
+                android:text="딸기크레페냠냠"
                 android:textColor="@color/white"
                 android:autoSizeTextType="uniform"
-                android:textSize="@dimen/helloTextSize" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/helloText"
@@ -92,8 +92,8 @@
                 android:fontFamily="@font/font_pretendard_bold"
                 android:gravity="center_vertical|start"
                 android:includeFontPadding="false"
-                android:letterSpacing="-0.05"
-                android:text="@string/hello_text"
+
+                android:text=", 안녕!"
                 android:textColor="@color/white"
                 android:autoSizeTextType="uniform"
                 android:textSize="@dimen/helloTextSize" />
