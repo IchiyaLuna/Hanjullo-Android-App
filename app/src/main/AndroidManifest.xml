@@ -3,6 +3,7 @@
     package="com.hanjullo.hanjulloapp">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,23 +14,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HanjulloApp">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".CalendarActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ranking"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".DailyQuestionEndingPopup"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".DailyQuestionSubActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".DailyQuestionChoiceActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="true">
