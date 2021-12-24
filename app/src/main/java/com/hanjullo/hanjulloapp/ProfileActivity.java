@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,6 +16,7 @@ public class ProfileActivity extends AppCompatActivity {
     private boolean isTodayAnswerTrue = false;
 
     private ActivityProfileBinding binding;
+    private TextView nameTextView;
     private ImageButton calendarImageButton;
 
 
@@ -33,6 +35,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void setBinding() {
         calendarImageButton = binding.calendarBtn;
+        nameTextView = binding.nameText;
     }
 
     private void setListener() {
@@ -40,13 +43,9 @@ public class ProfileActivity extends AppCompatActivity {
             Intent intent;
             @Override
             public void onClick(View v) {
-
-                switch (v.getId()) {
-                    case R.id.calendarBtn:
-                        intent = new Intent(getApplicationContext(), CalendarActivity.class);
-                        break;
-                    default:
-                        return;
+                int id = v.getId();
+                if (id == R.id.calendarBtn) {
+                    intent = new Intent(ProfileActivity.this, CalendarActivity.class);
                 }
 
                 startActivity(intent);
@@ -57,8 +56,13 @@ public class ProfileActivity extends AppCompatActivity {
         calendarImageButton.setOnClickListener(listener);
     }
 
+    private void loadData() {
+        UserData userdata = UserData.getInstance();
+        nameTextView.setText(userdata.getUserName());
+    }
+
     public void startDailyQuestion() {
-        Intent intent = new Intent(getApplicationContext(), DailyQuestionChoiceActivity.class);
+        Intent intent = new Intent(ProfileActivity.this, DailyQuestionChoiceActivity.class);
         startActivity(intent);
     }
 
