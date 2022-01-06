@@ -10,12 +10,95 @@
     <com.ssomai.android.scalablelayout.ScalableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:scale_base_width="360"
-        app:scale_base_height="640">
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
 
-        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            android:text="@string/app_name"
+            android:gravity="center"
+            app:scale_height="65"
+            app:scale_left="123"
+            app:scale_textsize="72"
+            app:scale_top="127"
+            app:scale_width="115"/>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:background="@drawable/check_auto_login"
+
+            app:scale_height="16"
+            app:scale_left="62"
+            app:scale_top="245"
+            app:scale_width="16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            app:scale_height="15"
+            app:scale_left="83"
+            app:scale_textsize="18"
+            app:scale_top="245"
+            app:scale_width="160"
+            android:text="@string/autologin_text" />
+
+        <EditText
+            android:id="@+id/editTextUserID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_login_input"
+            android:ems="10"
+            android:fontFamily="@font/font_slow_regular"
+            android:hint="@string/user_ID_inputHint"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+
+            app:scale_height="37"
+            app:scale_left="50"
+            app:scale_textsize="22"
+            app:scale_top="270"
+            app:scale_width="260"
+            android:autofillHints="username" />
+
+        <EditText
+            android:id="@+id/editTextUserPW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_login_input"
+            android:ems="10"
+            android:fontFamily="@font/font_slow_regular"
+            android:hint="@string/user_PW_inputHint"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+
+            app:scale_height="37"
+            app:scale_left="50"
+            app:scale_textsize="22"
+            app:scale_top="320"
+            app:scale_width="260"
+            android:autofillHints="password" />
+
+
+
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

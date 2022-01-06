@@ -19,12 +19,108 @@
             android:id="@+id/calendarRecyclerView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:scale_left="0"
-            app:scale_top="110"
-            app:scale_width="360"
-            app:scale_height="420"
+            app:scale_left="75"
+            app:scale_top="155"
+            app:scale_width="210"
+            app:scale_height="392"
 
             tools:listitem="@layout/item_calendar_1"/>
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="30"
+            app:scale_top="564"
+            app:scale_width="36"
+            app:scale_height="36"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/profile_btn"
+
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/btn_profile" />
+
+
+        <ImageButton
+            android:id="@+id/rankingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="118"
+            app:scale_top="564"
+            app:scale_width="36"
+            app:scale_height="36"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/ranking_btn"
+
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/btn_rank" />
+
+
+        <ImageButton
+            android:id="@+id/calendarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="206"
+            app:scale_top="564"
+            app:scale_width="36"
+            app:scale_height="36"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/calendar_btn"
+
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/btn_calendar" />
+
+
+        <ImageButton
+            android:id="@+id/settingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="294"
+            app:scale_top="564"
+            app:scale_width="36"
+            app:scale_height="36"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/setting_btn"
+
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/btn_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="105"
+            app:scale_top="90"
+            app:scale_width="150"
+            app:scale_height="34"
+            app:scale_textsize="36"
+            android:gravity="center"
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            android:text="@string/calendar_title" />
+
+        <TextView
+            android:id="@+id/todayDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_left="124"
+            app:scale_top="130"
+            app:scale_width="112"
+            app:scale_height="19"
+            app:scale_textsize="21"
+            android:gravity="center"
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            android:text="@string/default_loading" />
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
