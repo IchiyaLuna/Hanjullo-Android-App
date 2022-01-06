@@ -95,6 +95,7 @@
     <string name="home_pop_Answer">존버하자</string>
     <string name="title_activity_calendar">CalendarActivity</string>
     <string name="calendar_title">CALENDAR</string>
+    <string name="calendar_flag">CalendarFlagImg</string>
     <!-- Strings used for fragments for navigation -->
 
 
