@@ -78,7 +78,7 @@
                 android:gravity="center_vertical|end"
                 android:includeFontPadding="false"
 
-                android:text="딸기크레페냠냠"
+                android:text="@string/name_text_default"
                 android:textColor="@color/white"
                 android:autoSizeTextType="uniform"
                 android:textSize="24sp" />
@@ -93,7 +93,7 @@
                 android:gravity="center_vertical|start"
                 android:includeFontPadding="false"
 
-                android:text=", 안녕!"
+                android:text="@string/hello_text"
                 android:textColor="@color/white"
                 android:autoSizeTextType="uniform"
                 android:textSize="@dimen/helloTextSize" />
@@ -363,7 +363,7 @@
             app:srcCompat="@drawable/btn_rank" />
 
 
-            <ImageButton
+        <ImageButton
                 android:id="@+id/calendarBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -380,7 +380,7 @@
                 app:srcCompat="@drawable/btn_calendar" />
 
 
-            <ImageButton
+        <ImageButton
                 android:id="@+id/settingBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
