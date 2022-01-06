@@ -4,6 +4,9 @@
     <string name="app_name">한줄로</string>
     <string name="default_loading">로딩중</string>
 
+    <string name="user_ID_inputHint">ID</string>
+    <string name="user_PW_inputHint">PW</string>
+
     <string name="ellipse">EllipseLine</string>
     <string name="profile_image">ProfileImage</string>
     <string name="around_me_bg_image">AroundMeImage</string>
@@ -91,6 +94,7 @@
     <string name="home_pop_Question">1년전 나에게 해주고 싶은 말이 있다면?</string>
     <string name="home_pop_Answer">존버하자</string>
     <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="calendar_title">CALENDAR</string>
     <!-- Strings used for fragments for navigation -->
 
 
