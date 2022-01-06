@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hanjullo.hanjulloapp.databinding.ActivityCalendarBinding;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class CalendarActivity extends AppCompatActivity {
@@ -19,6 +23,8 @@ public class CalendarActivity extends AppCompatActivity {
 
     private LocalDate currentDate;
     private ActivityCalendarBinding binding;
+    private TextView todayTextView;
+    private ImageButton profileImageButton;
     private RecyclerView calendarRecyclerView;
     private CalendarAdapter calendarAdapter;
     private ArrayList<CalendarItem> calendarItems;
@@ -30,7 +36,40 @@ public class CalendarActivity extends AppCompatActivity {
         final View view = binding.getRoot();
         setContentView(view);
 
+        setBinding();
+        setListener();
+
         currentDate = LocalDate.now();
+
+        todayTextView.setText(currentDate.format(DateTimeFormatter.ofPattern("yyyy / MM / dd")));
+
+        setCalenderItems();
+    }
+
+    private void setBinding() {
+        profileImageButton = binding.profileBtn;
+        todayTextView = binding.todayDateText;
+    }
+
+    private void setListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
+            Intent intent;
+            @Override
+            public void onClick(View v) {
+                int id = v.getId();
+                if (id == R.id.profileBtn) {
+                    intent = new Intent(CalendarActivity.this, ProfileActivity.class);
+                }
+
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_left_open, R.anim.slide_left_close);
+            }
+        };
+
+        profileImageButton.setOnClickListener(listener);
+    }
+
+    private void setCalenderItems() {
 
         calendarItems = new ArrayList<>();
 

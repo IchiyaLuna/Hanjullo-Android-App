@@ -8,11 +8,14 @@
     <com.ssomai.android.scalablelayout.ScalableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_calendar_item_1"
+
         app:layout_constraintBottom_toBottomOf="parent"
-        app:scale_base_width="360"
-        app:scale_base_height="60"
-        android:background="@drawable/bg_test_item_1">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="112"
+        app:scale_base_width="420">
 
         <TextView
             android:id="@+id/c_item1_date"
@@ -25,11 +28,23 @@
             android:textColor="@color/white"
             app:scale_height="30"
 
-            app:scale_left="80"
+            app:scale_left="0"
             app:scale_textsize="20"
 
-            app:scale_top="15"
+            app:scale_top="42"
             app:scale_width="60" />
+
+        <ImageView
+            android:id="@+id/c_item1_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/img_flag_1"
+
+            app:scale_left="61"
+            app:scale_top="25"
+            app:scale_width="61"
+            app:scale_height="82"
+            android:contentDescription="@string/calendar_flag"/>
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
