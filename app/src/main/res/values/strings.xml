@@ -6,7 +6,7 @@
 
     <string name="user_ID_inputHint">ID</string>
     <string name="user_PW_inputHint">PW</string>
-
+    <string name="autologin_text">로그인 상태 유지 (자동 로그인)</string>
     <string name="ellipse">EllipseLine</string>
     <string name="profile_image">ProfileImage</string>
     <string name="around_me_bg_image">AroundMeImage</string>
