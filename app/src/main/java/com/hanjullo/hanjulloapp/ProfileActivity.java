@@ -29,7 +29,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         setBinding();
         setListener();
-
+        UserData userData = UserData.getInstance();
+        nameTextView.setText(userData.getUserName());
         switchFragment(isTodayAnswerTrue);
     }
 

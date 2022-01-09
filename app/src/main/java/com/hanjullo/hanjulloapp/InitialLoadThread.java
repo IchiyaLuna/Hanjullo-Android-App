@@ -69,11 +69,13 @@ public class InitialLoadThread extends Thread {
 
             Retrofit retrofit = RetrofitClient.getClient();
             RegisterInterface registerAPI = retrofit.create(RegisterInterface.class);
-            Call<ResponseDTO> call = registerAPI.pushRegister(mode, id, password, username, phone);
-            call.enqueue(new Callback<ResponseDTO>() {
+            Call<RegisterPullDTO> call = registerAPI.pushRegister(mode, id, password, username, phone);
+            call.enqueue(new Callback<RegisterPullDTO>() {
                 @Override
-                public void onResponse(@NonNull Call<ResponseDTO> call, @NonNull Response<ResponseDTO> response) {
-                    
+                public void onResponse(@NonNull Call<RegisterPullDTO> call, @NonNull Response<RegisterPullDTO> response) {
+
+                    if (!response.isSuccessful()) return;
+
                     Log.d("onSuccess", response.body().getResult());
 
                     Message message = handler.obtainMessage();
@@ -84,7 +86,7 @@ public class InitialLoadThread extends Thread {
                 }
 
                 @Override
-                public void onFailure(@NonNull Call<ResponseDTO> call, @NonNull Throwable t) {
+                public void onFailure(@NonNull Call<RegisterPullDTO> call, @NonNull Throwable t) {
                     Log.d("onFailure", "err = " + t.getMessage());
                 }
             });
