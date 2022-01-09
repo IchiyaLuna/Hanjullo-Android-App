@@ -7,6 +7,12 @@
     <string name="user_ID_inputHint">ID</string>
     <string name="user_PW_inputHint">PW</string>
     <string name="autologin_text">로그인 상태 유지 (자동 로그인)</string>
+    <string name="login_btn_text">LOG IN</string>
+    <string name="find_id_btn_text">ID 찾기</string>
+    <string name="find_pw_btn_text">PW 찾기</string>
+    <string name="register_btn_text">한줄로 가입하기</string>
+
+
     <string name="ellipse">EllipseLine</string>
     <string name="profile_image">ProfileImage</string>
     <string name="around_me_bg_image">AroundMeImage</string>

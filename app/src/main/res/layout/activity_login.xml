@@ -29,32 +29,33 @@
             app:scale_width="115"/>
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/autoLoginCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
             android:background="@drawable/check_auto_login"
 
-            app:scale_height="16"
-            app:scale_left="62"
-            app:scale_top="245"
-            app:scale_width="16" />
+            app:scale_height="20"
+            app:scale_left="60"
+            app:scale_top="240"
+            app:scale_width="20" />
 
         <TextView
+            android:id="@+id/autoLoginTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/font_slow_regular"
             android:textColor="@color/white"
-            app:scale_height="15"
-            app:scale_left="83"
+            app:scale_height="20"
+            app:scale_left="85"
             app:scale_textsize="18"
-            app:scale_top="245"
+            app:scale_top="240"
             app:scale_width="160"
             android:text="@string/autologin_text" />
 
         <EditText
-            android:id="@+id/editTextUserID"
+            android:id="@+id/userIDEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -62,7 +63,7 @@
             android:ems="10"
             android:fontFamily="@font/font_slow_regular"
             android:hint="@string/user_ID_inputHint"
-            android:inputType="textPersonName"
+            android:inputType="textVisiblePassword"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:textColor="@color/white"
@@ -76,7 +77,7 @@
             android:autofillHints="username" />
 
         <EditText
-            android:id="@+id/editTextUserPW"
+            android:id="@+id/userPWEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -84,7 +85,7 @@
             android:ems="10"
             android:fontFamily="@font/font_slow_regular"
             android:hint="@string/user_PW_inputHint"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:textColor="@color/white"
@@ -97,7 +98,83 @@
             app:scale_width="260"
             android:autofillHints="password" />
 
+        <TextView
+            android:id="@+id/errorMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/red_500"
+            android:gravity="center"
+            app:scale_height="20"
+            app:scale_left="60"
+            app:scale_textsize="18"
+            app:scale_top="365"
+            app:scale_width="240" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="32"
+            app:scale_left="136"
+            app:scale_textsize="20"
+            app:scale_top="390"
+            app:scale_width="88"
+
+            android:background="@drawable/btn_normal_selector"
+            android:text="@string/login_btn_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_slow_regular"/>
+
+        <Button
+            android:id="@+id/findIdBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="28"
+            app:scale_left="117"
+            app:scale_textsize="20"
+            app:scale_top="450"
+            app:scale_width="62"
+
+            android:background="@drawable/btn_transparent_selector"
+            android:text="@string/find_id_btn_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_slow_regular"/>
+
+        <Button
+            android:id="@+id/findPwBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="28"
+            app:scale_left="185"
+            app:scale_textsize="20"
+            app:scale_top="450"
+            app:scale_width="62"
+
+            android:background="@drawable/btn_transparent_selector"
+            android:text="@string/find_pw_btn_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_slow_regular"/>
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="36"
+            app:scale_left="84"
+            app:scale_textsize="20"
+            app:scale_top="500"
+            app:scale_width="190"
+
+            android:background="@drawable/btn_normal_selector"
+            android:text="@string/register_btn_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_slow_regular"/>
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
