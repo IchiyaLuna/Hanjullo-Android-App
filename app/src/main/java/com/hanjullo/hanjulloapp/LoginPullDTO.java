@@ -2,18 +2,15 @@ package com.hanjullo.hanjulloapp;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ResponseDTO {
+public class LoginPullDTO {
     @SerializedName("success")
     boolean success;
 
     @SerializedName("result")
     String result;
 
-    @SerializedName("id")
-    String id;
-
-    @SerializedName("UID")
-    int UID;
+    @SerializedName("username")
+    String username;
 
     public boolean isSuccess() {
         return success;
@@ -23,11 +20,7 @@ public class ResponseDTO {
         return result;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public int getUID() {
-        return UID;
+    public String getUsername() {
+        return username;
     }
 }

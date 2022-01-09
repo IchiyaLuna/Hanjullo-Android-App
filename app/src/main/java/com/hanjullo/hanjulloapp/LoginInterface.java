@@ -5,15 +5,13 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
-public interface RegisterInterface {
+public interface LoginInterface {
 
     @FormUrlEncoded
-    @POST("register.php")
-    Call<RegisterPullDTO> pushRegister(
+    @POST("login.php")
+    Call<LoginPullDTO> pushLogin(
             @Field("mode") String mode,
             @Field("id") String id,
-            @Field("password") String password,
-            @Field("username") String username,
-            @Field("phone") String phone
+            @Field("password") String password
     );
 }

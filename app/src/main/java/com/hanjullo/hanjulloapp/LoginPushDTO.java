@@ -2,7 +2,7 @@ package com.hanjullo.hanjulloapp;
 
 import com.google.gson.annotations.SerializedName;
 
-public class TransactionDTO {
+public class LoginPushDTO {
 
     @SerializedName("mode")
     public String mode;
