@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_100"
+    tools:context=".RegisterNameActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="20"
+            app:scale_left="100"
+            app:scale_top="170"
+            app:scale_width="160"
+            app:scale_textsize="18"
+
+            android:lineHeight="25dp"
+            android:fontFamily="@font/font_pretendard_semibold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+
+            android:text="@string/name_input_text"
+
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_name_input"
+
+            app:scale_height="85"
+            app:scale_left="55"
+            app:scale_top="260"
+            app:scale_width="250"
+            app:scale_textsize="18"
+
+            android:inputType="textPersonName"
+            android:autofillHints="username"
+
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:fontFamily="@font/font_pretendard_regular"
+            android:hint="@string/name_input_text"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/nameNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_answer_btn"
+
+            app:scale_height="40"
+            app:scale_left="120"
+            app:scale_top="490"
+            app:scale_width="120"
+            app:scale_textsize="16"
+
+            android:fontFamily="@font/font_pretendard_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+
+            android:text="@string/next_text"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -59,6 +59,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            app:scale_height="37"
+            app:scale_left="50"
+            app:scale_textsize="22"
+            app:scale_top="270"
+            app:scale_width="260"
+
             android:background="@drawable/bg_login_input"
             android:ems="10"
             android:fontFamily="@font/font_slow_regular"
@@ -68,18 +74,20 @@
             android:paddingEnd="20dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
+            android:maxLines="1"
 
-            app:scale_height="37"
-            app:scale_left="50"
-            app:scale_textsize="22"
-            app:scale_top="270"
-            app:scale_width="260"
             android:autofillHints="username" />
 
         <EditText
             android:id="@+id/userPWEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            app:scale_height="37"
+            app:scale_left="50"
+            app:scale_textsize="22"
+            app:scale_top="320"
+            app:scale_width="260"
 
             android:background="@drawable/bg_login_input"
             android:ems="10"
@@ -90,12 +98,8 @@
             android:paddingEnd="20dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
+            android:maxLines="1"
 
-            app:scale_height="37"
-            app:scale_left="50"
-            app:scale_textsize="22"
-            app:scale_top="320"
-            app:scale_width="260"
             android:autofillHints="password" />
 
         <TextView
