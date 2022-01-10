@@ -12,6 +12,21 @@
     <string name="find_pw_btn_text">PW 찾기</string>
     <string name="register_btn_text">한줄로 가입하기</string>
 
+    <string name="hello_message_text">환영합니다 한줄로 님!\n여정을 시작하시겠습니까?</string>
+    <string name="start_btn_text">시작하기</string>
+
+    <string name="name_set_text">당신의 활동명은?</string>
+    <string name="name_input_text">활동명을 입력하세요</string>
+
+    <string name="register_phone_text">휴대폰 인증</string>
+    <string name="register_phone_hint_text">휴대폰 번호를 입력하세요</string>
+    <string name="register_phone_check_button_text">인증</string>
+    <string name="register_name_text">닉네임</string>
+    <string name="register_password_text">비밀번호</string>
+    <string name="register_password_check_text">비밀번호 확인</string>
+    <string name="register_password_hint_text">비밀번호를 입력하세요</string>
+    <string name="register_password_check_hint_text">비밀번호를 다시 입력하세요</string>
+    <string name="register_next_btn">회원가입</string>
 
     <string name="ellipse">EllipseLine</string>
     <string name="profile_image">ProfileImage</string>
@@ -102,6 +117,15 @@
     <string name="title_activity_calendar">CalendarActivity</string>
     <string name="calendar_title">CALENDAR</string>
     <string name="calendar_flag">CalendarFlagImg</string>
+    <string name="title_activity_register_name">RegisterNameActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- Strings used for fragments for navigation -->
 
 
