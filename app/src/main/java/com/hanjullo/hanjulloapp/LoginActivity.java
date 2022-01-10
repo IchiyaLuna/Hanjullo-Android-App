@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText UserPWEditText;
 
     private Button LoginBtn;
+    private Button RegisterBtn;
     private Button FindIDBtn;
     private Button FindPWBtn;
 
@@ -58,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         setBinding();
         setTextWatcher();
         setListener();
+
         network = NetworkConnectionCheck.getInstance(getApplicationContext());
         network.register();
     }
@@ -74,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         UserPWEditText = binding.userPWEditText;
 
         LoginBtn = binding.loginBtn;
+        RegisterBtn = binding.registerBtn;
         FindIDBtn = binding.findIdBtn;
         FindPWBtn = binding.findPwBtn;
     }
@@ -188,6 +191,10 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         });
                     }
+                } else if (id == R.id.registerBtn) {
+                    Intent intent = new Intent(LoginActivity.this, RegisterHelloActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 } else if (id == R.id.findIdBtn) {
 
                 } else if (id == R.id.findPwBtn) {
@@ -202,6 +209,7 @@ public class LoginActivity extends AppCompatActivity {
         };
 
         LoginBtn.setOnClickListener(listener);
+        RegisterBtn.setOnClickListener(listener);
         FindIDBtn.setOnClickListener(listener);
         FindPWBtn.setOnClickListener(listener);
         AutoLoginTextView.setOnClickListener(listener);
