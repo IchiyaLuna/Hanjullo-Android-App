@@ -75,7 +75,8 @@
             android:fontFamily="@font/pretendard_regular"
             android:gravity="end|center_vertical"
 
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:text="@string/charCount_text_default"/>
 
         <Button
             android:id="@+id/stepBNextBtn"

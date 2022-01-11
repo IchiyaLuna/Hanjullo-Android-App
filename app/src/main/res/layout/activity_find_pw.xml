@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_100"
-    tools:context=".FindIDActivity">
+    tools:context=".FindPWActivity">
 
     <com.ssomai.android.scalablelayout.ScalableLayout
         android:layout_width="match_parent"
@@ -18,20 +18,35 @@
         app:scale_base_width="360">
 
         <TextView
+            android:id="@+id/findPWTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/font_slow_regular"
             android:textColor="@color/white"
-            android:text="@string/find_id_title_text"
+            android:text="@string/find_pw_title_text"
             android:gravity="center"
-            app:scale_height="65"
+            app:scale_height="35"
             app:scale_left="100"
             app:scale_textsize="30"
             app:scale_top="127"
             app:scale_width="160"/>
 
+        <TextView
+            android:id="@+id/findPWDescTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            android:text="@string/find_pw_desc_text"
+            android:gravity="top|center_horizontal"
+            app:scale_height="50"
+            app:scale_left="70"
+            app:scale_textsize="22"
+            app:scale_top="170"
+            app:scale_width="220"/>
+
         <EditText
-            android:id="@+id/findNameEditText"
+            android:id="@+id/findPWFirstEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_register_input"
@@ -50,12 +65,12 @@
             android:inputType="textPersonName"
             android:autofillHints="username"
             android:fontFamily="@font/font_slow_regular"
-            android:hint="@string/find_name_hint_text"
+            android:hint="@string/find_pw_id_hint_text"
             android:textColorHint="@color/white"
             android:textColor="@color/white"/>
 
         <EditText
-            android:id="@+id/findPhoneEditText"
+            android:id="@+id/findPWSecondEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:autofillHints="phone"
@@ -79,7 +94,7 @@
             app:scale_width="260" />
 
         <Button
-            android:id="@+id/idGetCodeBtn"
+            android:id="@+id/pwGetCodeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -123,7 +138,7 @@
             app:scale_width="180" />
 
         <Button
-            android:id="@+id/idCheckCodeBtn"
+            android:id="@+id/pwCheckCodeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -142,25 +157,6 @@
 
             android:text="@string/find_code_check_btn_text"/>
 
-        <Button
-            android:id="@+id/findIDNextBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:background="@drawable/btn_normal_selector"
-
-            app:scale_height="30"
-            app:scale_left="130"
-            app:scale_top="420"
-            app:scale_width="100"
-            app:scale_textsize="22"
-
-            android:fontFamily="@font/font_slow_regular"
-            android:gravity="center"
-            android:includeFontPadding="false"
-            android:textColor="@color/white"
-
-            android:text="@string/next_text"/>
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

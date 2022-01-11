@@ -66,7 +66,6 @@
             app:scale_width="260"
 
             android:background="@drawable/bg_login_input"
-            android:ems="10"
             android:fontFamily="@font/font_slow_regular"
             android:hint="@string/user_ID_inputHint"
             android:inputType="textVisiblePassword"
@@ -75,6 +74,7 @@
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:maxLines="1"
+            android:maxLength="30"
 
             android:autofillHints="username" />
 
@@ -99,7 +99,7 @@
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:maxLines="1"
-
+            android:imeOptions="actionDone"
             android:autofillHints="password" />
 
         <TextView
