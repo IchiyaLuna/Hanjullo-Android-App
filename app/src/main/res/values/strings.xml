@@ -47,9 +47,13 @@
     <string name="find_pw_desc_text">비밀번호를 찾으시려는 아이디와\n휴대폰 번호를 입력하세요</string>
     <string name="find_pw_id_hint_text">아이디를 입력하세요</string>
 
-    <string name="tos_title_text">이용약관</string>
+    <string name="tos_title_text">이용 약관</string>
     <string name="tos_privacy_select_text">개인정보 수집 및 이용 동의 (필수)</string>
     <string name="tos_eula_select_text">서비스 이용 동의 (필수)</string>
+
+    <string name="welcome_message_text">안녕하세요,\n한 줄 여정을 함께 그려나갈\n준비가 되셨나요?</string>
+    <string name="welcome_intro_title_text">한줄로 \"여행자\" 에게…</string>
+    <string name="welcome_intro_content_text">모험을 시작한 당신\n가는 길 마다 깃발을 꽂아야\n방향을 잃지 않는 답니다.\n\n당신이 어디에 있었는지\n당신이 어디에 있는지\n당신이 어디로 향하는지\n점을 찍어 나만의 지도로 만드세요\n\n표시점이 모여 한 선을 이루고,\n줄 위를 걷는 당신은\n저 멀리 종착지에\n점차 우아하게 다가설 수 있으니까요.</string>
 
     <string name="ellipse">EllipseLine</string>
     <string name="profile_image">ProfileImage</string>
