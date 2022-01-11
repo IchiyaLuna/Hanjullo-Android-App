@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_100"
+    tools:context=".WelcomeActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:scale_base_width="360"
+        app:scale_base_height="640">
+
+        <TextView
+            android:id="@+id/welcomeNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="30"
+            app:scale_left="60"
+            app:scale_top="190"
+            app:scale_width="240"
+            app:scale_textsize="26"
+
+            android:lineHeight="25dp"
+            android:fontFamily="@font/font_pretendard_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+
+            android:text="이름은최대열글자까지"
+
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/welcomeMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="80"
+            app:scale_left="70"
+            app:scale_top="240"
+            app:scale_width="220"
+            app:scale_textsize="18"
+
+            android:fontFamily="@font/font_pretendard_regular"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:includeFontPadding="false"
+
+            android:text="@string/welcome_message_text"/>
+
+        <TextView
+            android:id="@+id/welcomeIntroTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="30"
+            app:scale_left="60"
+            app:scale_top="125"
+            app:scale_width="240"
+            app:scale_textsize="24"
+
+            android:lineHeight="25dp"
+            android:fontFamily="@font/font_pretendard_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+
+            android:text="@string/welcome_intro_title_text"
+
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/welcomeIntroContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_tos"
+            android:fontFamily="@font/font_pretendard_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineHeight="17dp"
+
+            android:padding="20dp"
+            android:scrollbars="vertical"
+            android:text="@string/welcome_intro_content_text"
+            android:textColor="@color/white"
+            app:scale_height="295"
+            app:scale_left="55"
+            app:scale_textsize="15"
+            app:scale_top="170"
+
+            app:scale_width="250" />
+
+        <Button
+            android:id="@+id/welcomeNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_height="32"
+            app:scale_left="136"
+            app:scale_textsize="14"
+            app:scale_top="540"
+            app:scale_width="88"
+
+            android:background="@drawable/btn_normal_selector"
+            android:text="@string/next_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_pretendard_regular"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

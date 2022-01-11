@@ -66,6 +66,7 @@
             app:scale_width="15" />
 
         <TextView
+            android:id="@+id/tosPrivacyContentTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -81,6 +82,7 @@
             android:gravity="start"
             android:includeFontPadding="false"
             android:padding="20dp"
+            android:scrollbars="vertical"
 
             android:background="@drawable/bg_tos"
 
@@ -118,6 +120,7 @@
             app:scale_width="15" />
 
         <TextView
+            android:id="@+id/tosEULAContentTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -133,14 +136,15 @@
             android:gravity="start"
             android:includeFontPadding="false"
             android:padding="20dp"
+            android:scrollbars="vertical"
 
             android:background="@drawable/bg_tos"
 
-            android:text="테스트용어쩌구저쩌구입니다라라라라라ㅏ라"/>
+            android:text="테스트용어쩌구저쩌구입니다라라라라라ㅏ라아아아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ아아ㅏ"/>
 
 
         <Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/tosNextBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
