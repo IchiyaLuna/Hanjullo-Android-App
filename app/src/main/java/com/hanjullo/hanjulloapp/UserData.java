@@ -1,6 +1,9 @@
 package com.hanjullo.hanjulloapp;
 
+import android.util.Log;
+
 public class UserData {
+    private boolean isLoggedIn;
     private String userId;
     private String userPassword;
     private String userName;
@@ -26,7 +29,14 @@ public class UserData {
         this.userPassword = password;
     }
 
+    public void setLoginState(boolean state) {
+        this.isLoggedIn = state;
+        Log.d("[USERDATA]", "setLoginState: " + state);
+    }
 
+    public boolean isLoggedIn() {
+        return isLoggedIn;
+    }
 
     public void requestUserInfo() {
 
