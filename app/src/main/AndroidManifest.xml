@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HanjulloApp">
+        <activity
+            android:name=".FindIDResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FindIDActivity"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -44,10 +51,10 @@
             android:name=".DailyQuestionEndingPopup"
             android:exported="false" />
         <activity
-            android:name=".DailyQuestionSubActivity"
+            android:name=".DailyBQuestionActivity"
             android:exported="false" />
         <activity
-            android:name=".DailyQuestionChoiceActivity"
+            android:name=".DailyAQuestionActivity"
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"
