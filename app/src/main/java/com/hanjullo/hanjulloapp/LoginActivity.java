@@ -3,18 +3,29 @@ package com.hanjullo.hanjulloapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKey;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hanjullo.hanjulloapp.databinding.ActivityLoginBinding;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,7 +34,7 @@ import retrofit2.Retrofit;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private NetworkConnectionCheck network;
+    private long backPressedTime;
 
     private ActivityLoginBinding binding;
 
@@ -59,8 +70,38 @@ public class LoginActivity extends AppCompatActivity {
         setTextWatcher();
         setListener();
 
-        network = NetworkConnectionCheck.getInstance(getApplicationContext());
-        network.register();
+        Intent intent = getIntent();
+
+        if (intent.getBundleExtra("UserData") != null) {
+            Bundle receivedBundle = intent.getBundleExtra("UserData");
+            String ID = receivedBundle.getString("ID", "");
+            String PW = receivedBundle.getString("PW", "");
+
+            if (!ID.equals("")) UserIDEditText.setText(ID);
+            if (!PW.equals("")) UserPWEditText.setText(PW);
+        }
+
+        UserPWEditText.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo
+                    .IME_ACTION_DONE) {
+                String ID = UserIDEditText.getText().toString();
+                String PW = UserPWEditText.getText().toString();
+
+                if (ID.equals("") || PW.equals("")) {
+                    if (ID.equals(""))
+                        UserIDEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_login_input_err));
+                    if (PW.equals(""))
+                        UserPWEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_login_input_err));
+
+                    ErrorMessageTextView.setText("아이디와 비밀번호를 모두 입력해 주세요");
+                } else {
+                    doLogin(ID, PW);
+                }
+            } else {
+                return false;
+            }
+            return true;
+        });
     }
 
     private void setBinding() {
@@ -155,38 +196,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     ErrorMessageTextView.setText("아이디와 비밀번호를 모두 입력해 주세요");
                 } else {
-                    Retrofit retrofit = RetrofitClient.getClient();
-                    LoginInterface loginAPI = retrofit.create(LoginInterface.class);
-                    Call<LoginPullDTO> call = loginAPI.pushLogin("login", ID, PW);
-                    call.enqueue(new Callback<LoginPullDTO>() {
-                        @Override
-                        public void onResponse(@NonNull Call<LoginPullDTO> call, @NonNull Response<LoginPullDTO> response) {
-
-                            if (!response.isSuccessful()) {
-                                ErrorMessageTextView.setText("로그인 실패");
-                                return;
-                            }
-
-                            if (response.body().isSuccess()) {
-                                UserData userData = UserData.getInstance();
-                                userData.setCredential(ID, PW);
-                                userData.setUserName(response.body().getUsername());
-
-                                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-                                startActivity(intent);
-                                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-
-                                finish();
-                            } else {
-                                ErrorMessageTextView.setText("로그인 실패");
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(@NonNull Call<LoginPullDTO> call, @NonNull Throwable t) {
-                            ErrorMessageTextView.setText("서버 연결 실패");
-                        }
-                    });
+                    doLogin(ID, PW);
                 }
             } else if (id == R.id.registerBtn) {
                 Intent intent = new Intent(LoginActivity.this, RegisterHelloActivity.class);
@@ -197,7 +207,9 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             } else if (id == R.id.findPwBtn) {
-
+                Intent intent = new Intent(LoginActivity.this, FindPWActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             } else if (id == R.id.autoLoginTextView) {
                 AutoLoginCheckBox.setChecked(!isAutologin);
                 isAutologin = !isAutologin;
@@ -212,5 +224,100 @@ public class LoginActivity extends AppCompatActivity {
         FindPWBtn.setOnClickListener(listener);
         AutoLoginTextView.setOnClickListener(listener);
         AutoLoginCheckBox.setOnClickListener(listener);
+    }
+
+    private void doLogin(String ID, String PW) {
+        Retrofit retrofit = RetrofitClient.getClient();
+        LoginInterface loginAPI = retrofit.create(LoginInterface.class);
+        Call<LoginPullDTO> call = loginAPI.pushLogin("login", ID, PW);
+        call.enqueue(new Callback<LoginPullDTO>() {
+            @Override
+            public void onResponse(@NonNull Call<LoginPullDTO> call, @NonNull Response<LoginPullDTO> response) {
+
+                if (!response.isSuccessful() || response.body() == null) {
+                    ErrorMessageTextView.setText("로그인 실패");
+                    return;
+                }
+
+                if (response.body().isSuccess()) {
+
+                    try {
+                        setAutoLogin(AutoLoginCheckBox.isChecked(), ID, PW);
+                    } catch (GeneralSecurityException | IOException e) {
+                        ErrorMessageTextView.setText("자동 로그인 설정 실패");
+                    }
+
+                    UserData userData = UserData.getInstance();
+                    userData.setCredential(ID, PW);
+                    userData.setUserName(response.body().getUsername());
+
+                    Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+                    finish();
+                } else {
+                    ErrorMessageTextView.setText("로그인 실패");
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<LoginPullDTO> call, @NonNull Throwable t) {
+                ErrorMessageTextView.setText("서버 연결 실패");
+            }
+        });
+    }
+
+    private void setAutoLogin(boolean isAutologin, String ID, String PW) throws GeneralSecurityException, IOException {
+        MasterKey masterKey = new MasterKey.Builder(getApplicationContext(), MasterKey.DEFAULT_MASTER_KEY_ALIAS)
+                .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+                .build();
+
+
+        SharedPreferences userLoginPreferences = EncryptedSharedPreferences
+                .create(getApplicationContext(),
+                        "LoginInfo",
+                        masterKey,
+                        EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                        EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM);
+
+        SharedPreferences.Editor editor = userLoginPreferences.edit();
+
+        if (isAutologin) {
+            editor.putBoolean("is_autologin", true);
+            editor.putString("user_id", ID);
+            editor.putString("user_pw", PW);
+            editor.apply();
+        } else {
+            editor.putBoolean("is_autologin", false);
+        }
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() > backPressedTime + 2000) {
+            backPressedTime = System.currentTimeMillis();
+            Toast.makeText(this, "'뒤로' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() <= backPressedTime + 2000) {
+            finishAffinity();
+        }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        View focusView = getCurrentFocus();
+        if (focusView != null) {
+            Rect rect = new Rect();
+            focusView.getGlobalVisibleRect(rect);
+            int x = (int) ev.getX(), y = (int) ev.getY();
+            if (!rect.contains(x, y)) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                if (imm != null)
+                    imm.hideSoftInputFromWindow(focusView.getWindowToken(), 0);
+                focusView.clearFocus();
+            }
+        }
+        return super.dispatchTouchEvent(ev);
     }
 }
