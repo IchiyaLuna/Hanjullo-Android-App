@@ -96,11 +96,22 @@
     <string name="answer_bad">BadBtn</string>
 
     <string name="next_btn">NextBtn</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="why_happy_today">왜 oo 때문에\n 오늘이 좋았던거 같아?</string>
-    <string name="number_of_char">0/140</string>
+    <string name="answer_third_1">직업</string>
+    <string name="answer_third_2">학업</string>
+    <string name="answer_third_3">친구</string>
+    <string name="answer_third_4">가족</string>
+    <string name="answer_third_5">취미</string>
+    <string name="answer_third_6">운동</string>
+    <string name="answer_third_7">음식</string>
+    <string name="answer_third_8">수면</string>
+    <string name="answer_third_9">쇼핑</string>
+    <string name="answer_third_10">돈</string>
+    <string name="answer_third_11">휴식</string>
+    <string name="answer_third_12">여행</string>
+    <string name="answer_third_13">인간관계</string>
+    <string name="answer_third_14">SNS</string>
 
     <string name="daily_end_point">1 POINT!</string>
     <string name="daily_end">오늘 한 줄 채우기 완료!</string>

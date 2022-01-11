@@ -35,9 +35,9 @@
 
             android:fontFamily="@font/pretendard_medium"
             android:gravity="center"
-            android:text="@string/why_happy_today"
 
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:text="@string/question_A_text"/>
 
         <EditText
             android:id="@+id/stepBAnswerEditText"
