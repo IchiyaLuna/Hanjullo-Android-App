@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -140,71 +139,70 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void setListener() {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        View.OnClickListener listener = v -> {
 
-                int id = v.getId();
+            int id = v.getId();
 
-                if (id == R.id.loginBtn) {
-                    String ID = UserIDEditText.getText().toString();
-                    String PW = UserPWEditText.getText().toString();
+            if (id == R.id.loginBtn) {
+                String ID = UserIDEditText.getText().toString();
+                String PW = UserPWEditText.getText().toString();
 
-                    if (ID.equals("") || PW.equals("")) {
-                        if (ID.equals(""))
-                            UserIDEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_login_input_err));
-                        if (PW.equals(""))
-                            UserPWEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_login_input_err));
+                if (ID.equals("") || PW.equals("")) {
+                    if (ID.equals(""))
+                        UserIDEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_login_input_err));
+                    if (PW.equals(""))
+                        UserPWEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_login_input_err));
 
-                        ErrorMessageTextView.setText("아이디와 비밀번호를 모두 입력해 주세요");
-                    } else {
-                        Retrofit retrofit = RetrofitClient.getClient();
-                        LoginInterface loginAPI = retrofit.create(LoginInterface.class);
-                        Call<LoginPullDTO> call = loginAPI.pushLogin("login", ID, PW);
-                        call.enqueue(new Callback<LoginPullDTO>() {
-                            @Override
-                            public void onResponse(@NonNull Call<LoginPullDTO> call, @NonNull Response<LoginPullDTO> response) {
+                    ErrorMessageTextView.setText("아이디와 비밀번호를 모두 입력해 주세요");
+                } else {
+                    Retrofit retrofit = RetrofitClient.getClient();
+                    LoginInterface loginAPI = retrofit.create(LoginInterface.class);
+                    Call<LoginPullDTO> call = loginAPI.pushLogin("login", ID, PW);
+                    call.enqueue(new Callback<LoginPullDTO>() {
+                        @Override
+                        public void onResponse(@NonNull Call<LoginPullDTO> call, @NonNull Response<LoginPullDTO> response) {
 
-                                if (!response.isSuccessful()) {
-                                    ErrorMessageTextView.setText("로그인 실패");
-                                    return;
-                                }
-
-                                if (response.body().isSuccess()) {
-                                    UserData userData = UserData.getInstance();
-                                    userData.setCredential(ID, PW);
-                                    userData.setUserName(response.body().getUsername());
-
-                                    Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-                                    startActivity(intent);
-                                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-
-                                    finish();
-                                } else {
-                                    ErrorMessageTextView.setText("로그인 실패");
-                                }
+                            if (!response.isSuccessful()) {
+                                ErrorMessageTextView.setText("로그인 실패");
+                                return;
                             }
 
-                            @Override
-                            public void onFailure(@NonNull Call<LoginPullDTO> call, @NonNull Throwable t) {
-                                ErrorMessageTextView.setText("서버 연결 실패");
+                            if (response.body().isSuccess()) {
+                                UserData userData = UserData.getInstance();
+                                userData.setCredential(ID, PW);
+                                userData.setUserName(response.body().getUsername());
+
+                                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                                startActivity(intent);
+                                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+                                finish();
+                            } else {
+                                ErrorMessageTextView.setText("로그인 실패");
                             }
-                        });
-                    }
-                } else if (id == R.id.registerBtn) {
-                    Intent intent = new Intent(LoginActivity.this, RegisterHelloActivity.class);
-                    startActivity(intent);
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                } else if (id == R.id.findIdBtn) {
+                        }
 
-                } else if (id == R.id.findPwBtn) {
-
-                } else if (id == R.id.autoLoginTextView) {
-                    AutoLoginCheckBox.setChecked(!isAutologin);
-                    isAutologin = !isAutologin;
-                } else if (id == R.id.autoLoginCheckBox) {
-                    isAutologin = !isAutologin;
+                        @Override
+                        public void onFailure(@NonNull Call<LoginPullDTO> call, @NonNull Throwable t) {
+                            ErrorMessageTextView.setText("서버 연결 실패");
+                        }
+                    });
                 }
+            } else if (id == R.id.registerBtn) {
+                Intent intent = new Intent(LoginActivity.this, RegisterHelloActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            } else if (id == R.id.findIdBtn) {
+                Intent intent = new Intent(LoginActivity.this, FindIDActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            } else if (id == R.id.findPwBtn) {
+
+            } else if (id == R.id.autoLoginTextView) {
+                AutoLoginCheckBox.setChecked(!isAutologin);
+                isAutologin = !isAutologin;
+            } else if (id == R.id.autoLoginCheckBox) {
+                isAutologin = !isAutologin;
             }
         };
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_100"
+    tools:context=".FindIDResultActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            android:text="@string/result_id_title_text"
+            android:gravity="center"
+            app:scale_height="30"
+            app:scale_left="100"
+            app:scale_textsize="30"
+            app:scale_top="127"
+            app:scale_width="160"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            android:text="@string/result_id_desc_text"
+            android:gravity="center"
+            app:scale_height="60"
+            app:scale_left="70"
+            app:scale_textsize="22"
+            app:scale_top="170"
+            app:scale_width="220"/>
+
+        <TextView
+            android:id="@+id/resultIDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_result_id"
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+
+            android:textColor="@color/white"
+            app:scale_height="37"
+            app:scale_left="90"
+            app:scale_textsize="24"
+            app:scale_top="300"
+            app:scale_width="180" />
+
+        <Button
+            android:id="@+id/resultIDLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btn_normal_selector"
+
+            app:scale_height="30"
+            app:scale_left="130"
+            app:scale_top="380"
+            app:scale_width="100"
+            app:scale_textsize="22"
+
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+
+            android:text="@string/result_id_login_btn_text"/>
+
+        <Button
+            android:id="@+id/resultIDFindPWBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btn_normal_selector"
+
+            app:scale_height="30"
+            app:scale_left="130"
+            app:scale_top="420"
+            app:scale_width="100"
+            app:scale_textsize="22"
+
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+
+            android:text="@string/result_id_find_pw_btn_text"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
