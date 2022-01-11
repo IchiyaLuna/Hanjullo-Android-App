@@ -81,7 +81,7 @@
                 android:text="@string/name_text_default"
                 android:textColor="@color/white"
                 android:autoSizeTextType="uniform"
-                android:textSize="24sp" />
+                android:textSize="24dp" />
 
             <TextView
                 android:id="@+id/helloText"
@@ -96,7 +96,7 @@
                 android:text="@string/hello_text"
                 android:textColor="@color/white"
                 android:autoSizeTextType="uniform"
-                android:textSize="@dimen/helloTextSize" />
+                android:textSize="24dp" />
 
         </LinearLayout>
 
@@ -137,7 +137,7 @@
                 android:text="@string/around_me_text"
                 android:textColor="@color/white"
                 android:autoSizeTextType="uniform"
-                android:textSize="@dimen/aroundMeTitleTextSize" />
+                android:textSize="18dp" />
 
 
             <TextView
@@ -155,7 +155,7 @@
                 android:text="@string/keyword_text"
                 android:textColor="@color/white"
                 android:singleLine="true"
-                android:textSize="@dimen/aroundMeTagTextSize" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/tagTextA"
@@ -172,7 +172,7 @@
                 android:text="@string/keyword_default"
                 android:textColor="@color/white"
                 android:singleLine="true"
-                android:textSize="@dimen/aroundMeTagTextSize" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/tagTextB"
@@ -188,43 +188,43 @@
                 android:text="@string/keyword_default"
                 android:textColor="@color/white"
                 android:singleLine="true"
-                android:textSize="@dimen/aroundMeTagTextSize" />
+                android:textSize="13dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <ImageView
-                android:id="@+id/aroundMeBg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/aroundMeBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-                app:scale_left="50"
-                app:scale_top="334"
-                app:scale_width="260"
-                app:scale_height="30"
+            app:scale_left="50"
+            app:scale_top="334"
+            app:scale_width="260"
+            app:scale_height="30"
 
-                app:srcCompat="@drawable/bg_around_me"
-                android:contentDescription="@string/around_me_bg_image"/>
+            app:srcCompat="@drawable/bg_around_me"
+            android:contentDescription="@string/around_me_bg_image"/>
 
-            <TextView
-                android:id="@+id/aroundMeText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/aroundMeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-                app:scale_left="65"
-                app:scale_top="341"
-                app:scale_width="230"
-                app:scale_height="16"
-                app:scale_textsize="14"
+            app:scale_left="65"
+            app:scale_top="341"
+            app:scale_width="230"
+            app:scale_height="16"
+            app:scale_textsize="14"
 
-                android:fontFamily="@font/font_pretendard_regular"
-                android:gravity="center"
-                android:letterSpacing="-0.05"
-                android:text="@string/around_me_example"
-                android:includeFontPadding="false"
+            android:fontFamily="@font/font_pretendard_regular"
+            android:gravity="center"
+            android:letterSpacing="-0.05"
+            android:text="@string/around_me_example"
+            android:includeFontPadding="false"
 
-                android:textColor="@color/white"
-                android:singleLine="true" />
+            android:textColor="@color/white"
+            android:singleLine="true" />
 
 
         <TextView
@@ -259,7 +259,7 @@
             app:scale_left="164"
             app:scale_top="400"
             app:scale_width="20"
-            app:srcCompat="@drawable/btn_arrow_light" />
+            app:srcCompat="@drawable/btn_arrow_selector" />
 
         <TextView
             android:id="@+id/behindMeText"
@@ -293,7 +293,7 @@
             app:scale_height="20"
 
             android:contentDescription="@string/behind_me_btn"
-            app:srcCompat="@drawable/btn_arrow_light" />
+            app:srcCompat="@drawable/btn_arrow_selector"  />
 
         <TextView
             android:id="@+id/frontMeText"
@@ -327,7 +327,7 @@
             app:scale_height="20"
 
             android:contentDescription="@string/in_front_of_me_btn"
-            app:srcCompat="@drawable/btn_arrow_light" />
+            app:srcCompat="@drawable/btn_arrow_selector"  />
 
         <ImageButton
             android:id="@+id/profileBtn"
