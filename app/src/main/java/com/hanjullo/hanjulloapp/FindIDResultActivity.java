@@ -53,7 +53,11 @@ public class FindIDResultActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
             } else if (id == R.id.resultIDFindPWBtn) {
-
+                Intent intent = new Intent(FindIDResultActivity.this, FindPWActivity.class);
+                intent.putExtra("ID", ID);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                finish();
             }
         };
 
