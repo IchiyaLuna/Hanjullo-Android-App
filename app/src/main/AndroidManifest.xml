@@ -14,11 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HanjulloApp">
+
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
         <activity
             android:name=".RegisterHelloActivity"
             android:exported="false" />
@@ -36,13 +37,17 @@
             android:name=".RegisterAccountActivity"
             android:exported="false" />
         <activity
+            android:name=".ToSActivity"
+            android:exported="false" />
+        <activity
             android:name=".FindIDActivity"
             android:exported="false" />
-
         <activity
             android:name=".FindIDResultActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".FindPWActivity"
+            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="true" />
@@ -50,9 +55,8 @@
             android:name=".CalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".ranking"
+            android:name=".RankingActivity"
             android:exported="false" />
-
         <activity
             android:name=".DailyAQuestionActivity"
             android:exported="false" />
