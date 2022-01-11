@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.hanjullo.hanjulloapp.databinding.ActivityFindIdBinding;
-import com.hanjullo.hanjulloapp.databinding.ActivityLoginBinding;
 
 import java.util.Locale;
 import java.util.Random;
@@ -127,7 +126,7 @@ public class FindIDActivity extends AppCompatActivity {
                     call.enqueue(new Callback<FindIDPullDTO>() {
                         @Override
                         public void onResponse(@NonNull Call<FindIDPullDTO> call, @NonNull Response<FindIDPullDTO> response) {
-                            if (!response.isSuccessful()) {
+                            if (!response.isSuccessful() || response.body() == null) {
                                 ExceptionToast.showExceptionToast(getApplicationContext(), "RESPONSE", "아이디 찾기 실패!");
                                 return;
                             }

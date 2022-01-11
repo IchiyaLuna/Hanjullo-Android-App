@@ -3,6 +3,7 @@ package com.hanjullo.hanjulloapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -14,8 +15,10 @@ public class DailyAQuestionActivity extends AppCompatActivity {
     ActivityDailyAQuestionBinding binding;
 
     private int currentStep;
+
     private int stepASelect;
     private int stepBSelect;
+    private int stepCSelect;
 
     TextView QuestionTextView;
 
@@ -45,6 +48,20 @@ public class DailyAQuestionActivity extends AppCompatActivity {
                     }
 
                     break;
+                case 3:
+                    if (getStepCSel()) {
+                        Bundle answers = new Bundle();
+                        answers.putInt("answerA", stepASelect);
+                        answers.putInt("answerB", stepBSelect);
+                        answers.putInt("answerC", stepCSelect);
+
+                        Intent intent = new Intent(DailyAQuestionActivity.this, DailyBQuestionActivity.class);
+                        intent.putExtra("answersBundle", answers);
+
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    }
+
             }
         });
     }
@@ -116,6 +133,9 @@ public class DailyAQuestionActivity extends AppCompatActivity {
 
     private boolean getStepASel() {
         DailyAFirstFragment stepAFrag = (DailyAFirstFragment) getSupportFragmentManager().findFragmentById(R.id.fragFrame);
+
+        if (stepAFrag == null) return false;
+
         stepASelect = stepAFrag.currentBtn;
 
         return stepASelect != 0;
@@ -123,12 +143,21 @@ public class DailyAQuestionActivity extends AppCompatActivity {
 
     private boolean getStepBSel() {
         DailyASecondFragment stepBFrag = (DailyASecondFragment) getSupportFragmentManager().findFragmentById(R.id.fragFrame);
+
+        if (stepBFrag == null) return false;
+
         stepBSelect = stepBFrag.currentBtn;
 
         return stepBSelect != 0;
     }
 
-    private void getStepCSel() {
+    private boolean getStepCSel() {
         DailyAThirdFragment stepCFrag = (DailyAThirdFragment) getSupportFragmentManager().findFragmentById(R.id.fragFrame);
+
+        if (stepCFrag == null) return false;
+
+        stepCSelect = stepCFrag.currentBtn;
+
+        return stepCSelect != 0;
     }
 }

@@ -84,6 +84,8 @@ public class DailyAFirstFragment extends Fragment {
     }
     private void highlightBtn() {
 
+        if (getActivity() == null) return;
+
         Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(VibrationEffect.createOneShot(50,100));
 

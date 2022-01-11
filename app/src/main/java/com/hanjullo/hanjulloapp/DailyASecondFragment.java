@@ -47,6 +47,8 @@ public class DailyASecondFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        if (getArguments() == null) return null;
+
         stepASelect = getArguments().getInt("stepASelect", 0);
 
         View view = setBinding(inflater, container);
@@ -359,6 +361,8 @@ public class DailyASecondFragment extends Fragment {
     }
 
     private void highlightBtn() {
+
+        if (getActivity() == null) return;
 
         Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(VibrationEffect.createOneShot(50,100));

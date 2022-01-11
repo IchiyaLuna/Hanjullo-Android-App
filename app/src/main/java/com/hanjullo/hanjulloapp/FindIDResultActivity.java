@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.hanjullo.hanjulloapp.databinding.ActivityFindIdResultBinding;
-import com.hanjullo.hanjulloapp.databinding.ActivityLoginBinding;
 
 public class FindIDResultActivity extends AppCompatActivity {
 

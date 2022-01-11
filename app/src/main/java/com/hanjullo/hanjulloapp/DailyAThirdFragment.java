@@ -17,11 +17,6 @@ import com.hanjullo.hanjulloapp.databinding.FragmentDailyAThirdBinding;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DailyAThirdFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class DailyAThirdFragment extends Fragment {
 
     FragmentDailyAThirdBinding binding;
@@ -74,53 +69,40 @@ public class DailyAThirdFragment extends Fragment {
         View.OnClickListener listener = v -> {
 
             int id = v.getId();
-            String text = "";
 
             if (id == R.id.why01) {
                 currentBtn = 1;
-                text = "직업";
             } else if (id == R.id.why02) {
                 currentBtn = 2;
-                text = "학업";
             } else if (id == R.id.why03) {
                 currentBtn = 3;
-                text = "친구";
             } else if (id == R.id.why04) {
                 currentBtn = 4;
-                text = "가족";
             } else if (id == R.id.why05) {
                 currentBtn = 5;
-                text = "취미";
             } else if (id == R.id.why06) {
                 currentBtn = 6;
-                text = "운동";
             } else if (id == R.id.why07) {
                 currentBtn = 7;
-                text = "음식";
             } else if (id == R.id.why08) {
                 currentBtn = 8;
-                text = "수면";
             } else if (id == R.id.why09) {
                 currentBtn = 9;
-                text = "쇼핑";
             } else if (id == R.id.why10) {
                 currentBtn = 10;
-                text = "돈";
             } else if (id == R.id.why11) {
                 currentBtn = 11;
-                text = "휴식";
             } else if (id == R.id.why12) {
                 currentBtn = 12;
-                text = "여행";
             } else if (id == R.id.why13) {
                 currentBtn = 13;
-                text = "인간관계";
             } else if (id == R.id.why14) {
                 currentBtn = 14;
-                text = "SNS";
             }
 
-            binding.whySelectTextView.setText(text);
+            String answerText = DailyAThirdAnswers.getAnswerText(currentBtn);
+
+            binding.whySelectTextView.setText(answerText);
             highlightBtn();
         };
 
@@ -130,6 +112,8 @@ public class DailyAThirdFragment extends Fragment {
     }
 
     private void highlightBtn() {
+
+        if (getActivity() == null) return;
 
         Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(VibrationEffect.createOneShot(50,100));
