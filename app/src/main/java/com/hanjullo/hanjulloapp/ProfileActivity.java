@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,6 +14,7 @@ import com.hanjullo.hanjulloapp.databinding.ActivityProfileBinding;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    private long backPressedTime;
     private boolean isTodayAnswerTrue = false;
 
     private ActivityProfileBinding binding;
@@ -82,5 +84,15 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
         transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() > backPressedTime + 2000) {
+            backPressedTime = System.currentTimeMillis();
+            Toast.makeText(this, "'뒤로' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() <= backPressedTime + 2000) {
+            finishAffinity();
+        }
     }
 }

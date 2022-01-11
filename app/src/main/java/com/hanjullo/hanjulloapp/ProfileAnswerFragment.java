@@ -30,7 +30,7 @@ public class ProfileAnswerFragment extends Fragment {
         Button todayAnswerBtn = (Button) view.findViewById(R.id.todayAnswerBtn);
 
         if (getActivity() == null) return null;
-        
+
         todayAnswerBtn.setOnClickListener(view1 -> ((ProfileActivity) getActivity()).startDailyQuestion());
 
         // Inflate the layout for this fragment
