@@ -46,7 +46,12 @@ public class RegisterNameActivity extends AppCompatActivity {
 
             if (id == R.id.nameNextBtn) {
 
-                if (NameEditText.getText().toString().length() <= 5) {
+                if (NameEditText.getText().toString().replace(" ","").equals("")) {
+                    NameEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_name_input_err));
+                    return;
+                }
+
+                if (NameEditText.getText().toString().length() <= 10) {
                     Retrofit retrofit = RetrofitClient.getClient();
                     CheckNameInterface checkNameAPI = retrofit.create(CheckNameInterface.class);
                     Call<CheckNamePullDTO> call = checkNameAPI.pushCheckName("check", NameEditText.getText().toString());
@@ -59,11 +64,13 @@ public class RegisterNameActivity extends AppCompatActivity {
                             }
 
                             if (response.body().isSuccess()) {
+                                NameEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_name_input));
                                 Intent intent = new Intent(RegisterNameActivity.this, RegisterAccountActivity.class);
                                 intent.putExtra("username", NameEditText.getText().toString());
                                 startActivity(intent);
                                 overridePendingTransition(R.anim.slide_right_open, R.anim.slide_right_close);
                             } else {
+                                NameEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_name_input_err));
                                 ExceptionToast.showExceptionToast(getApplicationContext(), "RESPONSE", "이미 사용중인 활동명입니다.");
                             }
                         }

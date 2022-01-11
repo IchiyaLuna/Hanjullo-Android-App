@@ -1,9 +1,12 @@
 package com.hanjullo.hanjulloapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +31,10 @@ public class RegisterAccountActivity extends AppCompatActivity {
     Button PhoneCheckBtn;
 
     String username;
+    String OriginPhoneText;
+    String NewPhoneText;
+
+    boolean isPhoneChecked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,7 @@ public class RegisterAccountActivity extends AppCompatActivity {
 
         setBinding();
         setListener();
+        setTextWatcher();
 
         NameTextView.setText(username);
     }
@@ -69,5 +77,37 @@ public class RegisterAccountActivity extends AppCompatActivity {
 
         RegisterNextBtn.setOnClickListener(listener);
         PhoneCheckBtn.setOnClickListener(listener);
+    }
+
+    private void setTextWatcher() {
+
+        PhoneEditText.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                OriginPhoneText = PhoneEditText.getText().toString();
+
+                NewPhoneText = OriginPhoneText.replaceAll("[^0-9]","");
+
+                if (!NewPhoneText.replace(" ","").equals("")) {
+                    PhoneEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_register_input));
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!NewPhoneText.equals(OriginPhoneText)) {
+                    PhoneEditText.setText(NewPhoneText);
+                    PhoneEditText.setSelection(NewPhoneText.length());
+                }
+            }
+        });
+
     }
 }

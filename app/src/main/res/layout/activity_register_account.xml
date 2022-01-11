@@ -70,7 +70,7 @@
             android:gravity="start|center_vertical"
             android:includeFontPadding="false"
             android:maxLines="1"
-            android:maxLength="10"
+            android:maxLength="11"
             android:inputType="phone"
             android:autofillHints="phone"
             android:fontFamily="@font/font_pretendard_regular"
