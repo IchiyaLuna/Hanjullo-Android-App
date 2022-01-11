@@ -15,10 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HanjulloApp">
         <activity
-            android:name=".FindIDResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FindIDActivity"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -30,35 +27,41 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterAccountActivity"
+            android:name=".RegisterHelloActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterNameActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterHelloActivity"
+            android:name=".RegisterAccountActivity"
             android:exported="false" />
+        <activity
+            android:name=".FindIDActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FindIDResultActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
         <activity
             android:name=".CalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
             android:name=".ranking"
             android:exported="false" />
+
         <activity
-            android:name=".DailyQuestionEndingPopup"
+            android:name=".DailyAQuestionActivity"
             android:exported="false" />
         <activity
             android:name=".DailyBQuestionActivity"
             android:exported="false" />
         <activity
-            android:name=".DailyAQuestionActivity"
+            android:name=".DailyQuestionEndingPopup"
             android:exported="false" />
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="true" />
     </application>
 
 </manifest>
