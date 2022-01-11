@@ -63,7 +63,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void startDailyQuestion() {
-        Intent intent = new Intent(ProfileActivity.this, DailyQuestionChoiceActivity.class);
+        Intent intent = new Intent(ProfileActivity.this, DailyAQuestionActivity.class);
         startActivity(intent);
     }
 
