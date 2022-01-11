@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ranking extends AppCompatActivity {
+public class RankingActivity extends AppCompatActivity {
 
     private ArrayList<rankingData> arrayList;
     private rankingAdapter rankingAdapter;

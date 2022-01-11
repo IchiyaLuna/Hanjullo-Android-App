@@ -3,13 +3,11 @@ package com.hanjullo.hanjulloapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.util.Log;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
@@ -22,9 +20,6 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-        NetworkConnectionCheck network = NetworkConnectionCheck.getInstance(getApplicationContext());
-        network.register();
 
         loadingSkip = false;
 
@@ -69,13 +64,21 @@ public class SplashActivity extends AppCompatActivity {
                 loadingFinished = msg.getData().getBoolean("finished_loading");
             }
 
-            Log.d("isFinished", "Handler: skipped - " + loadingSkip);
-            Log.d("isFinished", "Handler: timerFinished - " + timerFinished);
-            Log.d("isFinished", "Handler: loadingFinished - " + loadingFinished);
-
             if (timerFinished && (loadingSkip || loadingFinished)) {
-                Intent intent = new Intent(SplashActivity.this, ProfileActivity.class);
+
+                UserData userData = UserData.getInstance();
+
+                Intent intent;
+
+                if (userData.isLoggedIn()) {
+                    intent = new Intent(SplashActivity.this, ProfileActivity.class);
+                } else {
+                    intent = new Intent(SplashActivity.this, LoginActivity.class);
+                }
+
                 startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
                 finish();
             }
         }

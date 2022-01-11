@@ -24,8 +24,6 @@ public class InitialLoadThread extends Thread {
     Handler handler;
     MasterKey masterKey;
 
-    NetworkConnectionCheck network;
-
     SharedPreferences debugPreferences;
     SharedPreferences userLoginPreferences;
 
@@ -52,80 +50,57 @@ public class InitialLoadThread extends Thread {
                         masterKey,
                         EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
                         EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM);
-
-        network = NetworkConnectionCheck.getInstance();
     }
 
     @Override
     public void run() {
-        Log.d("loadingthread", "loading started");
-        if (network.isConnected()) {
-            Log.d("loadingthread", "connected");
-            String mode = "reg";
-            String id = "testid";
-            String password = "testpw";
-            String username = "김밍멍";
-            String phone = "010-0000-0000";
+        Log.d("loading_thread", "loading started");
 
-            Retrofit retrofit = RetrofitClient.getClient();
-            RegisterInterface registerAPI = retrofit.create(RegisterInterface.class);
-            Call<RegisterPullDTO> call = registerAPI.pushRegister(mode, id, password, username, phone);
-            call.enqueue(new Callback<RegisterPullDTO>() {
-                @Override
-                public void onResponse(@NonNull Call<RegisterPullDTO> call, @NonNull Response<RegisterPullDTO> response) {
+        Message message = handler.obtainMessage();
+        Bundle bundle = new Bundle();
 
-                    if (!response.isSuccessful()) return;
+        boolean isAutologin = userLoginPreferences.getBoolean("is_autologin",false);
 
-                    Log.d("onSuccess", response.body().getResult());
+        if (isAutologin) {
+            UserData userData = UserData.getInstance();
 
-                    Message message = handler.obtainMessage();
-                    Bundle bundle = new Bundle();
-                    bundle.putBoolean("finished_loading", true);
-                    message.setData(bundle);
-                    handler.sendMessage(message);
-                }
+            String userID = userLoginPreferences.getString("user_id", "");
+            String userPW = userLoginPreferences.getString("user_pw", "");
 
-                @Override
-                public void onFailure(@NonNull Call<RegisterPullDTO> call, @NonNull Throwable t) {
-                    Log.d("onFailure", "err = " + t.getMessage());
-                }
-            });
-        } else {
-            Log.d("loadingthread", "not_connected");
+            doLogin(userID, userPW);
         }
 
-        Log.d("loadingthread", "loading finished");
-        Log.d("isOnline", ": " + network.isConnected());
+        bundle.putBoolean("finished_loading", true);
+        message.setData(bundle);
+        handler.sendMessage(message);
     }
 
-    private void loadUserData() {
+    private void doLogin(String ID, String PW) {
+        Retrofit retrofit = RetrofitClient.getClient();
+        LoginInterface loginAPI = retrofit.create(LoginInterface.class);
+        Call<LoginPullDTO> call = loginAPI.pushLogin("login", ID, PW);
+        call.enqueue(new Callback<LoginPullDTO>() {
+            @Override
+            public void onResponse(@NonNull Call<LoginPullDTO> call, @NonNull Response<LoginPullDTO> response) {
+                UserData userData = UserData.getInstance();
+                if (!response.isSuccessful() || response.body() == null) {
+                    userData.setLoginState(false);
+                    return;
+                }
 
+                if (response.body().isSuccess()) {
+                    userData.setCredential(ID, PW);
+                    userData.setUserName(response.body().getUsername());
+                    userData.setLoginState(true);
+                } else {
+                    userData.setLoginState(false);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<LoginPullDTO> call, @NonNull Throwable t) {
+                userData.setLoginState(false);
+            }
+        });
     }
-
-    private void loadUserLogin() {
-        int launchTime;
-        boolean isAutoLogin;
-        String userID;
-        String userPW;
-
-        launchTime = debugPreferences.getInt("launch_time", 0);
-
-        debugPreferences.edit().putInt("launch_time", launchTime + 1).apply();
-
-        launchTime = debugPreferences.getInt("launch_time", 0);
-
-        ExceptionToast.showExceptionToast(applicationContext,"0", "실행 횟수 : " + launchTime);
-
-
-        isAutoLogin= userLoginPreferences.getBoolean("is_autologin",false);
-
-        if (isAutoLogin) {
-            userID = userLoginPreferences.getString("user_id", "");
-            userPW = userLoginPreferences.getString("user_pw", "");
-            userData.setCredential(userID, userPW);
-        } else {
-            ExceptionToast.showExceptionToast(applicationContext,"20000", "자동 로그인 정보 없음.");
-        }
-    }
-
 }

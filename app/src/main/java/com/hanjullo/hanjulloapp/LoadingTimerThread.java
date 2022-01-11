@@ -18,10 +18,10 @@ class LoadingTimerThread extends Thread {
         int tick = 0;
         Log.d("thread", "run: thread on");
 
-        while (tick < 20) {
+        while (tick < 2) {
             Log.d("tick", "run: currentSec" + tick / 10);
             try {
-                Thread.sleep(100);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 tick += 1;
                 continue;
