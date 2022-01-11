@@ -119,12 +119,12 @@ public class RegisterAccountActivity extends AppCompatActivity {
                                     }
 
                                     if (response.body().isSuccess()) {
-                                        Bundle bundle = new Bundle();
-                                        bundle.putString("ID", ID);
-                                        bundle.putString("PW", PW);
+                                        UserData userData = UserData.getInstance();
+                                        userData.setLoginState(true);
+                                        userData.setCredential(ID, PW);
+                                        userData.setUserName(username);
 
-                                        Intent intent = new Intent(RegisterAccountActivity.this, LoginActivity.class);
-                                        intent.putExtra("UserData", bundle);
+                                        Intent intent = new Intent(RegisterAccountActivity.this, WelcomeActivity.class);
 
                                         startActivity(intent);
                                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

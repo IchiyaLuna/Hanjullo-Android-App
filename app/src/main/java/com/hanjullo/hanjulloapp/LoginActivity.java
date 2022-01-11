@@ -250,6 +250,7 @@ public class LoginActivity extends AppCompatActivity {
                     UserData userData = UserData.getInstance();
                     userData.setCredential(ID, PW);
                     userData.setUserName(response.body().getUsername());
+                    userData.setLoginState(true);
 
                     Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                     startActivity(intent);

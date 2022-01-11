@@ -32,7 +32,11 @@ public class ProfileActivity extends AppCompatActivity {
         setBinding();
         setListener();
         UserData userData = UserData.getInstance();
+
+        if (!userData.isLoggedIn()) finishAffinity();
+
         nameTextView.setText(userData.getUserName());
+
         switchFragment(isTodayAnswerTrue);
     }
 

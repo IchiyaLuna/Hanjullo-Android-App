@@ -62,8 +62,6 @@ public class InitialLoadThread extends Thread {
         boolean isAutologin = userLoginPreferences.getBoolean("is_autologin",false);
 
         if (isAutologin) {
-            UserData userData = UserData.getInstance();
-
             String userID = userLoginPreferences.getString("user_id", "");
             String userPW = userLoginPreferences.getString("user_pw", "");
 
