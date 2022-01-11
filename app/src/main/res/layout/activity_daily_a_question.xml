@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bg_app_100"
+    tools:context=".DailyAQuestionActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_width="360"
+        app:scale_base_height="640" >
+
+        <TextView
+            android:id="@+id/todayQuestionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/font_pretendard_medium"
+            android:gravity="center"
+            android:letterSpacing="-0.05"
+            android:text="@string/question_A_text"
+            android:textColor="@color/white"
+
+            app:scale_width="200"
+            app:scale_height="50"
+            app:scale_left="80"
+            app:scale_textsize="18"
+            app:scale_top="120" />
+
+        <FrameLayout
+            android:id="@+id/fragFrame"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+
+            app:scale_height="285"
+            app:scale_left="55"
+            app:scale_top="180"
+            app:scale_width="250">
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/stepANextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_answer_btn"
+
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/white"
+
+            android:stateListAnimator="@null"
+
+            app:scale_height="32"
+            app:scale_left="150"
+            app:scale_top="500"
+            app:scale_width="60"
+            app:scale_textsize="14"
+
+            android:text="@string/next_text"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ssomai.android.scalablelayout.ScalableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:scale_base_width="250"
+    app:scale_base_height="285"
+    tools:context=".DailyAThirdFragment">
+
+    <TextView
+        android:id="@+id/whySelectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="20"
+        app:scale_left="50"
+        app:scale_top="5"
+        app:scale_width="150"
+        app:scale_textsize="17"
+        android:gravity="center"
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="2"
+        app:scale_left="20"
+        app:scale_top="30"
+        app:scale_width="210"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/why01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="0"
+        app:scale_top="55"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="직업" />
+
+    <Button
+        android:id="@+id/why02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="65"
+        app:scale_top="55"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="학업" />
+
+    <Button
+        android:id="@+id/why03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="130"
+        app:scale_top="55"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="친구" />
+
+    <Button
+        android:id="@+id/why04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="195"
+        app:scale_top="55"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="가족" />
+
+    <Button
+        android:id="@+id/why05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="0"
+        app:scale_top="95"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="취미" />
+
+    <Button
+        android:id="@+id/why06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="65"
+        app:scale_top="95"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="운동" />
+
+    <Button
+        android:id="@+id/why07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="130"
+        app:scale_top="95"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="음식" />
+
+    <Button
+        android:id="@+id/why08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="195"
+        app:scale_top="95"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="수면" />
+
+    <Button
+        android:id="@+id/why09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="0"
+        app:scale_top="135"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="쇼핑" />
+
+    <Button
+        android:id="@+id/why10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="65"
+        app:scale_top="135"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="돈" />
+
+    <Button
+        android:id="@+id/why11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="130"
+        app:scale_top="135"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="휴식" />
+
+    <Button
+        android:id="@+id/why12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="195"
+        app:scale_top="135"
+        app:scale_width="55"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="여행" />
+
+    <Button
+        android:id="@+id/why13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="0"
+        app:scale_top="175"
+        app:scale_width="120"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="인간관계" />
+
+    <Button
+        android:id="@+id/why14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="30"
+        app:scale_left="130"
+        app:scale_top="175"
+        app:scale_width="120"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="SNS" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="30"
+        app:scale_left="0"
+        app:scale_top="255"
+        app:scale_width="250"
+        android:background="@drawable/btn_light_style"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="30"
+        app:scale_left="0"
+        app:scale_top="255"
+        app:scale_width="70"
+        app:scale_textsize="15"
+
+        android:gravity="start|center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="5dp"
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+        android:text="기타 :"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="30"
+        app:scale_left="50"
+        app:scale_top="255"
+        app:scale_width="200"
+        app:scale_textsize="15"
+        android:background="@color/transparent"
+        android:gravity="start|center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="5dp"
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+        android:autofillHints="null"
+        android:inputType="text"
+        android:maxLength="6"/>
+
+</com.ssomai.android.scalablelayout.ScalableLayout>

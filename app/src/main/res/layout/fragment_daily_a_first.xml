@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.ssomai.android.scalablelayout.ScalableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/dailyAnswerWidth"
-    android:layout_height="@dimen/dailyAnswerHeight"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context=".DailyHowFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:scale_base_width="250"
+    app:scale_base_height="285"
+    tools:context=".DailyAFirstFragment">
 
     <Button
         android:id="@+id/bestBtn"
-        android:layout_width="@dimen/howBtnWidth"
-        android:layout_height="@dimen/howBtnHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="45"
+        app:scale_left="35"
+        app:scale_top="0"
+        app:scale_width="180"
+        app:scale_textsize="17"
 
         android:background="@drawable/btn_light_style"
 
         android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
-        android:textSize="@dimen/howBtnTextSize"
 
         android:stateListAnimator="@null"
 
@@ -25,13 +33,19 @@
 
     <Button
         android:id="@+id/goodBtn"
-        android:layout_width="@dimen/howBtnWidth"
-        android:layout_height="@dimen/howBtnHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="45"
+        app:scale_left="35"
+        app:scale_top="60"
+        app:scale_width="180"
+        app:scale_textsize="17"
+
         android:background="@drawable/btn_light_style"
 
         android:fontFamily="@font/pretendard_regular"
         android:textColor="@color/white"
-        android:textSize="@dimen/howBtnTextSize"
 
         android:stateListAnimator="@null"
 
@@ -40,8 +54,14 @@
 
     <Button
         android:id="@+id/niceBtn"
-        android:layout_width="@dimen/howBtnWidth"
-        android:layout_height="@dimen/howBtnHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="45"
+        app:scale_left="35"
+        app:scale_top="120"
+        app:scale_width="180"
+        app:scale_textsize="17"
 
         android:background="@drawable/btn_light_style"
 
@@ -56,8 +76,14 @@
 
     <Button
         android:id="@+id/notBadBtn"
-        android:layout_width="@dimen/howBtnWidth"
-        android:layout_height="@dimen/howBtnHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="45"
+        app:scale_left="35"
+        app:scale_top="180"
+        app:scale_width="180"
+        app:scale_textsize="17"
 
         android:background="@drawable/btn_light_style"
 
@@ -72,8 +98,14 @@
 
     <Button
         android:id="@+id/badBtn"
-        android:layout_width="@dimen/howBtnWidth"
-        android:layout_height="@dimen/howBtnHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="45"
+        app:scale_left="35"
+        app:scale_top="240"
+        app:scale_width="180"
+        app:scale_textsize="17"
 
         android:background="@drawable/btn_light_style"
 
@@ -84,4 +116,4 @@
         android:stateListAnimator="@null"
 
         android:text="@string/question_today_bad"/>
-</LinearLayout>
+</com.ssomai.android.scalablelayout.ScalableLayout>

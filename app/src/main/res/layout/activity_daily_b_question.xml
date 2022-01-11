@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bg_app_100"
+    tools:context=".DailyBQuestionActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
+
+
+        <TextView
+            android:id="@+id/stepBQuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_width="200"
+            app:scale_height="50"
+            app:scale_left="80"
+            app:scale_textsize="18"
+            app:scale_top="120"
+
+            android:labelFor="@id/stepBAnswerEditText"
+
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="@string/why_happy_today"
+
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/stepBAnswerEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_width="230"
+            app:scale_height="90"
+            app:scale_left="65"
+            app:scale_top="210"
+            app:scale_textsize="18"
+
+            android:background="@drawable/bg_answer_input"
+            android:padding="10dp"
+            android:gravity="center"
+
+            android:maxLines="3"
+            android:maxLength="140"
+
+            android:autofillHints="null"
+            android:inputType="textMultiLine"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/charNumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:scale_width="60"
+            app:scale_height="20"
+            app:scale_left="220"
+            app:scale_top="305"
+            app:scale_textsize="12"
+
+            android:fontFamily="@font/pretendard_regular"
+            android:gravity="end|center_vertical"
+
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/stepBNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_answer_btn"
+
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/white"
+
+            android:stateListAnimator="@null"
+
+            app:scale_height="32"
+            app:scale_left="150"
+            app:scale_top="500"
+            app:scale_width="60"
+            app:scale_textsize="14"
+
+            android:text="@string/next_text"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

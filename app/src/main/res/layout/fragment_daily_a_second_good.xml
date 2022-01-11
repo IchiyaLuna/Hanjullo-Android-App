@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ssomai.android.scalablelayout.ScalableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:scale_base_width="250"
+    app:scale_base_height="285"
+    tools:context=".DailyASecondFragment">
+
+    <TextView
+        android:id="@+id/whatSelectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="20"
+        app:scale_left="50"
+        app:scale_top="5"
+        app:scale_width="150"
+        app:scale_textsize="17"
+        android:gravity="center"
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="2"
+        app:scale_left="20"
+        app:scale_top="30"
+        app:scale_width="210"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/good01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="0"
+        app:scale_top="55"
+        app:scale_width="125"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="영감이 떠올라" />
+
+    <Button
+        android:id="@+id/good02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="130"
+        app:scale_top="55"
+        app:scale_width="120"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="희망이 넘처" />
+
+    <Button
+        android:id="@+id/good03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="0"
+        app:scale_top="100"
+        app:scale_width="80"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="편안해" />
+
+    <Button
+        android:id="@+id/good04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="85"
+        app:scale_top="100"
+        app:scale_width="80"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="감사해" />
+
+    <Button
+        android:id="@+id/good05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="170"
+        app:scale_top="100"
+        app:scale_width="80"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="해냈어" />
+
+    <Button
+        android:id="@+id/good06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="0"
+        app:scale_top="145"
+        app:scale_width="120"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="열정이 넘쳐" />
+
+    <Button
+        android:id="@+id/good07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="125"
+        app:scale_top="145"
+        app:scale_width="125"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="끝내기 아쉬워" />
+
+    <Button
+        android:id="@+id/good08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="0"
+        app:scale_top="190"
+        app:scale_width="90"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="긍정적이야" />
+
+    <Button
+        android:id="@+id/good09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="95"
+        app:scale_top="190"
+        app:scale_width="75"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="흥분돼" />
+
+    <Button
+        android:id="@+id/good10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="175"
+        app:scale_top="190"
+        app:scale_width="75"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="행복해" />
+
+    <Button
+        android:id="@+id/good11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="0"
+        app:scale_top="235"
+        app:scale_width="120"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="자신감 있어" />
+
+    <Button
+        android:id="@+id/good12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:scale_height="40"
+        app:scale_left="125"
+        app:scale_top="235"
+        app:scale_width="125"
+        app:scale_textsize="15"
+
+        android:background="@drawable/btn_light_style"
+
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/white"
+
+        android:stateListAnimator="@null"
+
+        android:text="성취감이 있어" />
+</com.ssomai.android.scalablelayout.ScalableLayout>
