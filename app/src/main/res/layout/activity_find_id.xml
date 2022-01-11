@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_100"
+    tools:context=".FindIDActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_slow_regular"
+            android:textColor="@color/white"
+            android:text="@string/find_id_title_text"
+            android:gravity="center"
+            app:scale_height="65"
+            app:scale_left="100"
+            app:scale_textsize="30"
+            app:scale_top="127"
+            app:scale_width="160"/>
+
+        <EditText
+            android:id="@+id/findNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_register_input"
+
+            app:scale_height="37"
+            app:scale_left="50"
+            app:scale_top="230"
+            app:scale_width="260"
+            app:scale_textsize="22"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="start|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:inputType="textPersonName"
+            android:autofillHints="username"
+            android:fontFamily="@font/font_slow_regular"
+            android:hint="@string/find_name_hint_text"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/findPhoneEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="phone"
+
+            android:background="@drawable/bg_register_input"
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="start|center_vertical"
+            android:hint="@string/find_phone_hint_text"
+            android:includeFontPadding="false"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:scale_height="37"
+            app:scale_left="50"
+            app:scale_textsize="22"
+            app:scale_top="280"
+            app:scale_width="260" />
+
+        <Button
+            android:id="@+id/getCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btn_normal_selector"
+
+            app:scale_height="30"
+            app:scale_left="130"
+            app:scale_top="330"
+            app:scale_width="100"
+            app:scale_textsize="20"
+
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+
+            android:text="@string/find_get_sms_btn_text"/>
+
+        <EditText
+            android:id="@+id/inputCodeEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="center"
+            android:hint="@string/find_code_hint_text"
+            android:includeFontPadding="false"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:autofillHints="null"
+            app:scale_height="40"
+            app:scale_left="50"
+            app:scale_textsize="22"
+            app:scale_top="347"
+            app:scale_width="180" />
+
+        <Button
+            android:id="@+id/checkCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btn_normal_selector"
+
+            app:scale_height="30"
+            app:scale_left="240"
+            app:scale_top="350"
+            app:scale_width="70"
+            app:scale_textsize="20"
+
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+
+            android:text="@string/find_code_check_btn_text"/>
+
+        <Button
+            android:id="@+id/findIDNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btn_normal_selector"
+
+            app:scale_height="30"
+            app:scale_left="130"
+            app:scale_top="420"
+            app:scale_width="100"
+            app:scale_textsize="22"
+
+            android:fontFamily="@font/font_slow_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+
+            android:text="@string/next_text"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
