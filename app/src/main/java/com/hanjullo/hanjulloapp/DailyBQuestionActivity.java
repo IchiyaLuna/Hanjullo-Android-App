@@ -2,6 +2,7 @@ package com.hanjullo.hanjulloapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.graphics.Rect;
@@ -17,15 +18,23 @@ import android.widget.TextView;
 
 import com.hanjullo.hanjulloapp.databinding.ActivityDailyBQuestionBinding;
 
+import java.time.LocalDate;
+
 public class DailyBQuestionActivity extends AppCompatActivity {
 
     ActivityDailyBQuestionBinding binding;
     TextView QuestionTextView;
+    TextView ExtraQuestionTextView;
     TextView CharNumTextView;
     EditText AnswerEditText;
     Button NextBtn;
 
     Bundle answersBundle;
+
+    int currentStep;
+    String stepBAnswer;
+    String extraAnswer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +44,8 @@ public class DailyBQuestionActivity extends AppCompatActivity {
 
         Intent pullIntent = getIntent();
         answersBundle = pullIntent.getBundleExtra("answersBundle");
+
+        currentStep = 1;
 
         setBinding();
 
@@ -64,10 +75,42 @@ public class DailyBQuestionActivity extends AppCompatActivity {
         QuestionTextView.setText(buffer.toString());
 
         NextBtn.setOnClickListener(v -> {
-            if (AnswerEditText.getText().toString().replace(" ","").equals("")) {
-                AnswerEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_answer_input_err));
-            } else {
 
+            switch (currentStep) {
+                case 1:
+
+                    stepBAnswer = AnswerEditText.getText().toString();
+
+                    if (stepBAnswer.replace(" ","").equals("")) {
+                        AnswerEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_answer_input_err));
+                    } else {
+                        QuestionTextView.setText("특별한 한 줄");
+                        ExtraQuestionTextView.setText("오늘 하루 간절히 바랐던 것이 있다면?");
+                        AnswerEditText.setText("");
+                        currentStep = 2;
+                    }
+                    break;
+                case 2:
+
+                    extraAnswer = AnswerEditText.getText().toString();
+
+                    if (extraAnswer.replace(" ","").equals("")) {
+                        AnswerEditText.setBackground(AppCompatResources.getDrawable(getApplicationContext(), R.drawable.bg_answer_input_err));
+                    } else {
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("answerA",answersBundle.getInt("answerA"));
+                        bundle.putInt("answerB",answersBundle.getInt("answerB"));
+                        bundle.putInt("answerC",answersBundle.getInt("answerC"));
+                        bundle.putString("answerStepB", stepBAnswer);
+                        bundle.putString("answerExtra", extraAnswer);
+
+                        Intent intent = new Intent(DailyBQuestionActivity.this, DailyQuestionEndingPopup.class);
+                        intent.putExtra("answersBundle", bundle);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                        finish();
+                    }
+                    break;
             }
         });
 
@@ -97,6 +140,7 @@ public class DailyBQuestionActivity extends AppCompatActivity {
 
     private void setBinding() {
         QuestionTextView = binding.stepBQuestionTextView;
+        ExtraQuestionTextView = binding.stepBExtraQuestionTextView;
         CharNumTextView = binding.charNumTextView;
         AnswerEditText = binding.stepBAnswerEditText;
         NextBtn = binding.stepBNextBtn;
