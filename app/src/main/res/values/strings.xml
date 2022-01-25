@@ -123,8 +123,13 @@
 
     <string name="charCount_text_default">0/140</string>
 
+    <string name="extra_question_example">오늘 하루 간절히 바랐던 것이 있다면?</string>
+
     <string name="daily_end_point">1 POINT!</string>
     <string name="daily_end">오늘 한 줄 채우기 완료!</string>
+
+    <string name="ibf_b_title_text">BEHIND ME</string>
+
     <string name="daily_end_around">Around me</string>
     <string name="daily_end_in_front">In front of me</string>
     <string name="daily_end_behind">Behind me</string>
