@@ -7,166 +7,72 @@
     android:background="@drawable/bg_app_100"
     tools:context=".DailyQuestionEndingPopup">
 
-
-    <View
-        android:id="@+id/dailyEndBg"
-        android:layout_width="337.4dp"
-        android:layout_height="464dp"
-
-        android:layout_marginTop="96dp"
-        android:background="@drawable/bg_daily_end"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </View>
-
-    <TextView
-        android:id="@+id/dailyEndPoint"
-        android:layout_width="146dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="93dp"
-        android:fontFamily="@font/pretendard_semibold"
-        android:gravity="center"
-        android:text="@string/daily_end_point"
-
-        android:textColor="@color/white"
-        android:textSize="35sp"
-
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dailyEndBg" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
 
-    <TextView
-        android:id="@+id/dailyEnd"
-        android:layout_width="211dp"
-        android:layout_height="27.36dp"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:gravity="center"
-        android:text="@string/daily_end"
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:textColor="@color/white"
-        android:textSize="19sp"
+            app:scale_width="300"
+            app:scale_height="365"
+            app:scale_left="30"
+            app:scale_top="90"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dailyEndPoint" />
+            android:background="@drawable/bg_daily_end"/>
 
-    <TextView
-        android:id="@+id/dailyEndAround"
-        android:layout_width="100dp"
-        android:layout_height="28.5dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/pretendard_semibold"
-        android:gravity="center"
-        android:text="@string/daily_end_around"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:textColor="@color/white"
-        android:textSize="19sp"
+            app:scale_width="120"
+            app:scale_height="40"
+            app:scale_left="120"
+            app:scale_top="170"
+            app:scale_textsize="28"
 
-        app:layout_constraintStart_toStartOf="@+id/dailyEndBg"
-        app:layout_constraintTop_toBottomOf="@+id/dailyEnd" />
+            android:fontFamily="@font/pretendard_semibold"
+            android:gravity="center"
+            android:text="@string/daily_end_point"
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="270dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="1dp"
-        android:background="#ffffff"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="@+id/dailyEndBg"
-        app:layout_constraintTop_toBottomOf="@+id/dailyEndAround">
+            android:textColor="@color/white" />
 
-    </View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/dailyEndInFront"
-        android:layout_width="106dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="38dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:gravity="center"
-        android:text="@string/daily_end_in_front"
+            app:scale_width="180"
+            app:scale_height="30"
+            app:scale_left="90"
+            app:scale_top="220"
+            app:scale_textsize="18"
 
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
-        app:layout_constraintStart_toEndOf="@+id/dailyEndBg"
-        app:layout_constraintStart_toStartOf="@+id/dailyEndBg" />
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="@string/daily_end"
 
-    <ImageView
-        android:id="@+id/dailyEndInFrontBtn"
-        android:layout_width="22.8dp"
-        android:layout_height="22.8dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
-        app:layout_constraintStart_toEndOf="@+id/dailyEndInFront"
-        android:contentDescription="@string/in_front_of_me_btn"
-        app:srcCompat="@drawable/btn_arrow_light" />
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
 
-    <TextView
-        android:id="@+id/dailyEndBehind"
-        android:layout_width="84dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="22dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:gravity="center"
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
 
-        android:text="@string/daily_end_behind"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/dailyEndInFront"
-        app:layout_constraintStart_toEndOf="@+id/dailyEndBg"
-        app:layout_constraintStart_toStartOf="@+id/dailyEndBg" />
+            app:scale_height="40"
+            app:scale_left="160"
+            app:scale_top="340"
+            app:scale_width="40" />
 
-    <ImageView
-        android:id="@+id/dailyEndBehindBtn"
-        android:layout_width="22.8dp"
-        android:layout_height="22.8dp"
-
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="83dp"
-        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
-        app:layout_constraintStart_toEndOf="@+id/dailyEndBehind"
-        android:contentDescription="@string/behind_me_btn"
-        app:srcCompat="@drawable/btn_arrow_light" />
-
-    <TextView
-        android:id="@+id/dailyEndInside"
-        android:layout_width="75dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="22dp"
-        android:fontFamily="@font/pretendard_medium"
-
-        android:gravity="center"
-        android:text="@string/daily_end_inside"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/dailyEndBehind"
-        app:layout_constraintStart_toEndOf="@+id/dailyEndBg"
-        app:layout_constraintStart_toStartOf="@+id/dailyEndBg" />
-
-    <ImageView
-        android:id="@+id/dailyEndInsideBtn"
-        android:layout_width="22.8dp"
-        android:layout_height="22.8dp"
-
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="132dp"
-        app:layout_constraintBottom_toBottomOf="@+id/dailyEndBg"
-        app:layout_constraintStart_toEndOf="@+id/dailyEndInside"
-        android:contentDescription="@string/inside_me_btn"
-        app:srcCompat="@drawable/btn_arrow_light" />
-
-
-
+    </com.ssomai.android.scalablelayout.ScalableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

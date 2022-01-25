@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_100"
-    tools:context=".DailyBQuestionActivity">
+    tools:context=".IBFQuestionActivity">
 
     <com.ssomai.android.scalablelayout.ScalableLayout
         android:layout_width="match_parent"
@@ -20,12 +19,12 @@
 
 
         <TextView
-            android:id="@+id/stepBQuestionTextView"
+            android:id="@+id/ibfTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             app:scale_width="200"
-            app:scale_height="50"
+            app:scale_height="30"
             app:scale_left="80"
             app:scale_textsize="18"
             app:scale_top="120"
@@ -36,10 +35,10 @@
             android:gravity="top|center_horizontal"
 
             android:textColor="@color/white"
-            android:text="@string/question_A_text"/>
+            android:text="@string/ibf_b_title_text"/>
 
         <TextView
-            android:id="@+id/stepBExtraQuestionTextView"
+            android:id="@+id/ibfQuestionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -49,7 +48,7 @@
             app:scale_textsize="14"
             app:scale_top="150"
 
-            android:labelFor="@id/stepBAnswerEditText"
+            android:labelFor="@id/ibfAnswerEditText"
 
             android:fontFamily="@font/pretendard_medium"
             android:gravity="center"
@@ -57,7 +56,7 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/stepBAnswerEditText"
+            android:id="@+id/ibfAnswerEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -67,7 +66,7 @@
             app:scale_top="210"
             app:scale_textsize="18"
 
-            android:background="@drawable/bg_answer_input"
+            android:background="@drawable/bg_ibf_answer_input"
             android:padding="10dp"
             android:gravity="center"
 
@@ -96,7 +95,7 @@
             android:text="@string/charCount_text_default"/>
 
         <Button
-            android:id="@+id/stepBNextBtn"
+            android:id="@+id/ibfNextBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 

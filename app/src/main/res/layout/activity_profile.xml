@@ -11,21 +11,23 @@
     <com.ssomai.android.scalablelayout.ScalableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:scale_base_width="360"
-        app:scale_base_height="640" >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:contentDescription="@string/ellipse"
             app:scale_height="162"
             app:scale_left="0"
             app:scale_top="65"
-            app:scale_width="261"
 
-            android:contentDescription="@string/ellipse"
+            app:scale_width="261"
             app:srcCompat="@drawable/img_ellipse" />
 
         <ImageButton
@@ -33,15 +35,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:background="@color/transparent"
+            android:contentDescription="@string/add_btn"
+            android:scaleType="fitCenter"
             app:scale_height="20"
+
             app:scale_left="170"
             app:scale_top="137"
             app:scale_width="20"
-
-            android:contentDescription="@string/add_btn"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/btn_add"
-            android:background="@color/transparent"/>
+            app:srcCompat="@drawable/btn_add" />
 
         <ImageView
             android:id="@+id/profileImg"
@@ -61,12 +63,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:orientation="horizontal"
+            app:scale_height="26"
             app:scale_left="0"
             app:scale_top="241"
-            app:scale_width="360"
-            app:scale_height="26"
 
-            android:orientation="horizontal">
+            app:scale_width="360">
 
             <TextView
                 android:id="@+id/nameText"
@@ -74,13 +76,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
 
+                android:autoSizeTextType="uniform"
                 android:fontFamily="@font/font_pretendard_bold"
                 android:gravity="center_vertical|end"
-                android:includeFontPadding="false"
 
+                android:includeFontPadding="false"
                 android:text="@string/name_text_default"
                 android:textColor="@color/white"
-                android:autoSizeTextType="uniform"
                 android:textSize="24dp" />
 
             <TextView
@@ -89,13 +91,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
 
+                android:autoSizeTextType="uniform"
                 android:fontFamily="@font/font_pretendard_bold"
                 android:gravity="center_vertical|start"
-                android:includeFontPadding="false"
 
+                android:includeFontPadding="false"
                 android:text="@string/hello_text"
                 android:textColor="@color/white"
-                android:autoSizeTextType="uniform"
                 android:textSize="24dp" />
 
         </LinearLayout>
@@ -105,145 +107,140 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            app:scale_height="30"
             app:scale_left="90"
             app:scale_top="272"
-            app:scale_width="180"
-            app:scale_height="30">
+            app:scale_width="180">
 
         </FrameLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/aroundMeTitleLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:orientation="horizontal"
+            app:scale_height="20"
             app:scale_left="60"
             app:scale_top="308"
-            app:scale_width="240"
-            app:scale_height="20"
-            android:orientation="horizontal">
+            app:scale_width="240">
 
             <TextView
-                android:id="@+id/aroundMeTitleText"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-
+                android:autoSizeTextType="uniform"
                 android:fontFamily="@font/font_pretendard_semibold"
+
                 android:gravity="bottom|start"
                 android:includeFontPadding="false"
                 android:text="@string/around_me_text"
                 android:textColor="@color/white"
-                android:autoSizeTextType="uniform"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <TextView
-                android:id="@+id/keywordText"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/tagTextA"
                 android:layout_marginEnd="5dp"
-
                 android:fontFamily="@font/font_pretendard_regular"
                 android:gravity="bottom|end"
+
                 android:includeFontPadding="false"
+                android:singleLine="true"
                 android:text="@string/keyword_text"
                 android:textColor="@color/white"
-                android:singleLine="true"
-                android:textSize="13dp" />
+                android:textSize="13dp"
+                app:layout_constraintEnd_toStartOf="@id/tagTextA"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tagTextA"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/tagTextB"
-
                 android:layout_marginEnd="5dp"
                 android:fontFamily="@font/font_pretendard_regular"
+
                 android:gravity="bottom|center"
                 android:includeFontPadding="false"
+                android:singleLine="true"
                 android:text="@string/keyword_default"
                 android:textColor="@color/white"
-                android:singleLine="true"
-                android:textSize="13dp" />
+                android:textSize="13dp"
+                app:layout_constraintEnd_toStartOf="@id/tagTextB"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tagTextB"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-
                 android:fontFamily="@font/font_pretendard_regular"
                 android:gravity="bottom|center"
+
                 android:includeFontPadding="false"
+                android:singleLine="true"
                 android:text="@string/keyword_default"
                 android:textColor="@color/white"
-                android:singleLine="true"
-                android:textSize="13dp" />
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <ImageView
-            android:id="@+id/aroundMeBg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:contentDescription="@string/around_me_bg_image"
+            app:scale_height="30"
             app:scale_left="50"
             app:scale_top="334"
-            app:scale_width="260"
-            app:scale_height="30"
 
-            app:srcCompat="@drawable/bg_around_me"
-            android:contentDescription="@string/around_me_bg_image"/>
+            app:scale_width="260"
+            app:srcCompat="@drawable/bg_around_me" />
 
         <TextView
             android:id="@+id/aroundMeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            app:scale_left="65"
-            app:scale_top="341"
-            app:scale_width="230"
-            app:scale_height="16"
-            app:scale_textsize="14"
-
             android:fontFamily="@font/font_pretendard_regular"
             android:gravity="center"
-            android:letterSpacing="-0.05"
-            android:text="@string/around_me_example"
             android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:singleLine="true"
 
+            android:text="@string/around_me_example"
             android:textColor="@color/white"
-            android:singleLine="true" />
+            app:scale_height="16"
+            app:scale_left="65"
+            app:scale_textsize="14"
+
+            app:scale_top="341"
+            app:scale_width="230" />
 
 
         <TextView
-            android:id="@+id/insideMeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            app:scale_left="60"
-            app:scale_top="400"
-            app:scale_width="80"
-            app:scale_height="20"
-            app:scale_textsize="17"
-
             android:fontFamily="@font/font_pretendard_semibold"
             android:gravity="center_vertical|start"
-            android:letterSpacing="-0.04"
             android:includeFontPadding="false"
+            android:letterSpacing="-0.04"
             android:text="@string/inside_me_text"
-            android:textColor="@color/white" />
+
+            android:textColor="@color/white"
+            app:scale_height="20"
+            app:scale_left="60"
+            app:scale_textsize="17"
+            app:scale_top="400"
+            app:scale_width="80" />
 
         <ImageButton
             android:id="@+id/insideMeBtn"
@@ -251,9 +248,9 @@
             android:layout_height="wrap_content"
 
             android:background="@color/transparent"
-            android:scaleType="fitCenter"
-
             android:contentDescription="@string/inside_me_btn"
+
+            android:scaleType="fitCenter"
 
             app:scale_height="20"
             app:scale_left="164"
@@ -262,22 +259,21 @@
             app:srcCompat="@drawable/btn_arrow_selector" />
 
         <TextView
-            android:id="@+id/behindMeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            app:scale_left="60"
-            app:scale_top="440"
-            app:scale_width="90"
-            app:scale_height="20"
-            app:scale_textsize="17"
-
-            android:includeFontPadding="false"
             android:fontFamily="@font/font_pretendard_semibold"
             android:gravity="center_vertical|start"
+            android:includeFontPadding="false"
             android:letterSpacing="-0.04"
             android:text="@string/behind_me_text"
-            android:textColor="@color/white" />
+
+            android:textColor="@color/white"
+            app:scale_height="20"
+            app:scale_left="60"
+            app:scale_textsize="17"
+            app:scale_top="440"
+            app:scale_width="90" />
 
         <ImageButton
             android:id="@+id/behindMeBtn"
@@ -285,33 +281,32 @@
             android:layout_height="wrap_content"
 
             android:background="@color/transparent"
-            android:scaleType="fitCenter"
+            android:contentDescription="@string/behind_me_btn"
 
+            android:scaleType="fitCenter"
+            app:scale_height="20"
             app:scale_left="164"
             app:scale_top="440"
-            app:scale_width="20"
-            app:scale_height="20"
 
-            android:contentDescription="@string/behind_me_btn"
-            app:srcCompat="@drawable/btn_arrow_selector"  />
+            app:scale_width="20"
+            app:srcCompat="@drawable/btn_arrow_selector" />
 
         <TextView
-            android:id="@+id/frontMeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            app:scale_left="60"
-            app:scale_top="480"
-            app:scale_width="100"
-            app:scale_height="20"
-            app:scale_textsize="17"
-
-            android:includeFontPadding="false"
             android:fontFamily="@font/font_pretendard_semibold"
             android:gravity="center_vertical|start"
+            android:includeFontPadding="false"
             android:letterSpacing="-0.04"
             android:text="@string/in_front_of_me_text"
-            android:textColor="@color/white" />
+
+            android:textColor="@color/white"
+            app:scale_height="20"
+            app:scale_left="60"
+            app:scale_textsize="17"
+            app:scale_top="480"
+            app:scale_width="100" />
 
         <ImageButton
             android:id="@+id/frontMeBtn"
@@ -319,82 +314,87 @@
             android:layout_height="wrap_content"
 
             android:background="@color/transparent"
-            android:scaleType="fitCenter"
+            android:contentDescription="@string/in_front_of_me_btn"
 
+            android:scaleType="fitCenter"
+            app:scale_height="20"
             app:scale_left="164"
             app:scale_top="480"
-            app:scale_width="20"
-            app:scale_height="20"
 
-            android:contentDescription="@string/in_front_of_me_btn"
-            app:srcCompat="@drawable/btn_arrow_selector"  />
+            app:scale_width="20"
+            app:srcCompat="@drawable/btn_arrow_selector" />
 
         <ImageButton
             android:id="@+id/profileBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            app:scale_left="30"
-            app:scale_top="564"
-            app:scale_width="36"
-            app:scale_height="36"
-
             android:background="@color/transparent"
             android:contentDescription="@string/profile_btn"
-
+            android:padding="6dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/btn_profile" />
 
+            app:scale_height="48"
+
+            app:scale_left="24"
+            app:scale_top="558"
+
+            app:scale_width="48"
+            app:srcCompat="@drawable/btn_profile" />
 
         <ImageButton
             android:id="@+id/rankingBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            app:scale_left="118"
-            app:scale_top="564"
-            app:scale_width="36"
-            app:scale_height="36"
-
             android:background="@color/transparent"
             android:contentDescription="@string/ranking_btn"
-
+            android:padding="6dp"
             android:scaleType="fitCenter"
+
+            app:scale_height="48"
+
+            app:scale_left="112"
+            app:scale_top="558"
+
+            app:scale_width="48"
             app:srcCompat="@drawable/btn_rank" />
 
+        <ImageButton
+            android:id="@+id/calendarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/calendar_btn"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+
+            app:scale_height="48"
+
+            app:scale_left="200"
+            app:scale_top="558"
+
+            app:scale_width="48"
+            app:srcCompat="@drawable/btn_calendar" />
 
         <ImageButton
-                android:id="@+id/calendarBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            android:id="@+id/settingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-                app:scale_left="206"
-                app:scale_top="564"
-                app:scale_width="36"
-                app:scale_height="36"
+            android:background="@color/transparent"
+            android:contentDescription="@string/setting_btn"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
 
-                android:background="@color/transparent"
-                android:contentDescription="@string/calendar_btn"
+            app:scale_height="48"
 
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/btn_calendar" />
+            app:scale_left="288"
+            app:scale_top="558"
 
-
-        <ImageButton
-                android:id="@+id/settingBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:scale_left="294"
-                app:scale_top="564"
-                app:scale_width="36"
-                app:scale_height="36"
-
-                android:background="@color/transparent"
-                android:contentDescription="@string/setting_btn"
-
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/btn_setting" />
+            app:scale_width="48"
+            app:srcCompat="@drawable/btn_setting" />
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
