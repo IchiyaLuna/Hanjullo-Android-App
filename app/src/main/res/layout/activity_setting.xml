@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_100"
+    tools:context=".SettingActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="640"
+        app:scale_base_width="360">
+
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/profile_btn"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+
+            app:scale_height="48"
+
+            app:scale_left="24"
+            app:scale_top="558"
+
+            app:scale_width="48"
+            app:srcCompat="@drawable/btn_profile" />
+
+        <ImageButton
+            android:id="@+id/rankingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/ranking_btn"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+
+            app:scale_height="48"
+
+            app:scale_left="112"
+            app:scale_top="558"
+
+            app:scale_width="48"
+            app:srcCompat="@drawable/btn_rank" />
+
+        <ImageButton
+            android:id="@+id/calendarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/calendar_btn"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+
+            app:scale_height="48"
+
+            app:scale_left="200"
+            app:scale_top="558"
+
+            app:scale_width="48"
+            app:srcCompat="@drawable/btn_calendar" />
+
+        <ImageButton
+            android:id="@+id/settingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/transparent"
+            android:contentDescription="@string/setting_btn"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+
+            app:scale_height="48"
+
+            app:scale_left="288"
+            app:scale_top="558"
+
+            app:scale_width="48"
+            app:srcCompat="@drawable/btn_setting" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
